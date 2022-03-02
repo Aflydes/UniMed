@@ -77,7 +77,7 @@
                 <div class="offers__slide">
                     <div class="offer__info">
                         <h1 class="offer__heading">Скидка на первичный прием</h1>
-                        <p class="offer__discount">20%</p>
+                        <p class="offer__discount discount">20%</p>
                         <p class="offer__description">Узнайте полный план лечения, его примерную продолжительность,
                             количество визитов к врачу и стоимость</p>
                         <div class="offer__form">
@@ -100,7 +100,7 @@
 
         <div class="services">
             <div class="container">
-                <h2 class="services__heading">услуги клиники</h2>
+                <h2 class="services__heading"> <span class="text_color_red">услуги</span>  клиники</h2>
                 <div class="services__list">
                     <div class="service__card service__card--large">
                         <h4 class="service__heading">Вызов врача на дом</h4>
@@ -117,7 +117,8 @@
                         <p class="service__description">Диагностика, 
                             лечение,
                             вакцинация</p>
-                        <object data="" type="image/svg+xml"></object>
+                        <img class="service__image-vaccine" src="img/vaccine.png" alt="vaccine">
+                        <img class="service__image-antigen" src="img/antigen.png" alt="antigen">
                         <a href="#" class="service__button-more">
                             <svg height="24" width="24">
                                 <use xlink:href="img/icons.svg#arrow-more"></use>
@@ -129,7 +130,7 @@
                         <p class="service__description">Удаление родинок,
                             пигментных пятен,
                             шрамов и рубцов</p>
-                        <object data="" type="image/svg+xml"></object>
+                        <img src="img/laser.png" alt="Laser" class="service__image-laser">
                         <a href="#" class="service__button-more">
                             <svg height="24" width="24">
                                 <use xlink:href="img/icons.svg#arrow-more"></use>
@@ -141,7 +142,7 @@
                         <p class="service__description">Лечение,
                             имплантология,
                             удаление зубов</p>
-                        <object data="" type="image/svg+xml"></object>
+                        <img src="img/tooth.png" alt="Tooth" class="service__image-tooth">
                         <a href="#" class="service__button-more">
                             <svg height="24" width="24">
                                 <use xlink:href="img/icons.svg#arrow-more"></use>
@@ -153,13 +154,51 @@
                         <p class="service__description">Анализы крови,
                             мазки на флору,
                             комплексные</p>
-                        <object data="" type="image/svg+xml"></object>
+                        <img src="img/microscope.png" alt="microscope" class="service__image-microscope">
                         <a href="#" class="service__button-more">
                             <svg height="24" width="24">
                                 <use xlink:href="img/icons.svg#arrow-more"></use>
                             </svg>
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stocks">
+            <div class="container">
+                <h2 class="stocks__heading"><span class="text_color_red">Акции</span>  и специальные предложения</h2>
+                <div class="stocks__list">
+                    <div class="stock__card">
+                        <img src="img/family-doctor.png" alt="Family doctor" class="stock__image-doctor">
+                        <div class="stock__card-content">
+                            <h4 class="sctock__heading">Семейный доктор</h4>
+                            <p class="stock__short-description">Диагностика, лечение, профилактика заболеваний...</p>
+                            <a href="#" class="stock__link">смотреть акцию</a>
+                        </div>
+                    </div>
+                    <div class="stock__card stock__card--large">
+                        <img src="img/first-visit-discount.png" alt="first-visit-discount" class="stock__image-discount">
+                        <div class="stock__card-content">
+                            <h3 class="sctock__heading"><span class="text_color_red">Скидка</span>  на первичный прием</h3>
+                            <div class="stock__text">
+                                <span class="stock__short-description">Узнайте полный план лечения, примерную продолжительность, количество визитов к врачу и стоимость</span>
+                                <span class="stock__discount discount">20%</span>
+                            </div>
+                            <a href="#" class="button stock__card-button button--green">
+                                <span class="button__body">запись онлайн </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="stock__card">
+                        <img src="img/checkUp.png" alt="checkUp" class="stock__image-checkup">
+                        <div class="stock__card-content">
+                            <h4 class="sctock__heading">Check Up здоровья</h4>
+                            <p class="stock__short-description">Комплексное обследование: лабораторная диагностика...</p>
+                            <a href="#" class="stock__link">смотреть акцию</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
