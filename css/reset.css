@@ -1,0 +1,48 @@
+@import url("fonts/stylesheet.css");
+a,
+body,
+div,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+header,
+html,
+iframe,
+img,
+input,
+label,
+li,
+nav,
+object,
+p,
+span,
+ul,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Cera Pro';
+  vertical-align: baseline;
+  box-sizing: border-box;
+  outline: 0;
+}
+main{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+html {
+    scroll-behavior: auto; 
+}
+img{
+    max-width: 100%;
+}

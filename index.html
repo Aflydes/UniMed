@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <title>ЮниМед</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-bar">
+            <div class="header__logo">
+                <object data="img/logo.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="header__search">
+                <input type="text" class="header__search-input" placeholder="Поиск по сайту...">
+                <svg class="header__search-icon" height="24" width="24">
+                    <use xlink:href="img/icons.svg#search"></use>
+                </svg>
+            </div>
+            <div class="header__contacts">
+                <p class="header__adress">Симферополь, ул.Ленина, 1
+                    8:00 - 20:00, без выходных</p>
+                <div class="header__callback">
+                    <a href="tel:+79999999999" class="header__phone">+7 (999) 999 - 99 - 99</a>
+                    <a href="#" class="header__callback-button">обратный звонок</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom-bar">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link current_nav_link">Главная</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Услуги</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Лаборатория</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Врачи</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">О компании</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Дисконтная карта</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Новости и акции</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="button header__button button--green">
+                <span class="button__body">запись онлайн</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="offers">
+            <div class="offers__slider">
+                <div class="offers__slide">
+                    <div class="offer__info">
+                        <h1 class="offer__heading">Скидка на первичный прием</h1>
+                        <p class="offer__discount">20%</p>
+                        <p class="offer__description">Узнайте полный план лечения, его примерную продолжительность,
+                            количество визитов к врачу и стоимость</p>
+                        <div class="offer__form">
+                            <input class="offer__form-phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                            <a href="#" class="button offer__form-button button--red">
+                                <span class="button__body">записаться на прием</span>
+                            </a>
+                            <p class="offer__form-notice">Нажимая на кнопкку получать рассылку, вы 
+                                соглашаетесь правилами конфиденцильности</p>
+                        </div>
+                    </div>
+                    <div class="offer__image">
+                        
+                    </div>
+                </div>
+                <div class="offers__slide"></div>
+                <div class="offers__slide"></div>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="container">
+                <h2 class="services__heading">услуги клиники</h2>
+                <div class="services__list">
+                    <div class="service__card service__card--large">
+                        <h4 class="service__heading">Вызов врача на дом</h4>
+                        <p class="service__description">Терапевт, педиатр, медсестра </p>
+                        <img class="service__image-bag" src="img/bag.png" alt="Bag">
+                        <a href="#" class="service__button-more">
+                            <svg height="24" width="24">
+                                <use xlink:href="img/icons.svg#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service__card">
+                        <h4 class="service__heading">COVID-19</h4>
+                        <p class="service__description">Диагностика, 
+                            лечение,
+                            вакцинация</p>
+                        <object data="" type="image/svg+xml"></object>
+                        <a href="#" class="service__button-more">
+                            <svg height="24" width="24">
+                                <use xlink:href="img/icons.svg#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service__card">
+                        <h4 class="service__heading">Лазерная терапия</h4>
+                        <p class="service__description">Удаление родинок,
+                            пигментных пятен,
+                            шрамов и рубцов</p>
+                        <object data="" type="image/svg+xml"></object>
+                        <a href="#" class="service__button-more">
+                            <svg height="24" width="24">
+                                <use xlink:href="img/icons.svg#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service__card">
+                        <h4 class="service__heading">Стоматология</h4>
+                        <p class="service__description">Лечение,
+                            имплантология,
+                            удаление зубов</p>
+                        <object data="" type="image/svg+xml"></object>
+                        <a href="#" class="service__button-more">
+                            <svg height="24" width="24">
+                                <use xlink:href="img/icons.svg#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service__card">
+                        <h4 class="service__heading">Лаборатория</h4>
+                        <p class="service__description">Анализы крови,
+                            мазки на флору,
+                            комплексные</p>
+                        <object data="" type="image/svg+xml"></object>
+                        <a href="#" class="service__button-more">
+                            <svg height="24" width="24">
+                                <use xlink:href="img/icons.svg#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+			
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,220 @@
+h1{
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+h4{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}
+a,p,span,li{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #333635;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    text-transform: uppercase;
+}
+.button__body{
+    color: #ffffff;
+}
+.button--green{
+    background-color: #28a267;
+}
+.button--red{
+    background-color: #e9341b;
+}
+/*  header  */
+.header__top-bar{
+    padding: 28px 55px 29px 59px;
+    display: flex;
+}
+.header__search{
+    margin-left: 32px;
+    max-width: 730px;
+    width: 37.5%;
+    height: 51px;
+}
+.header__search-input{
+    width: 100%;
+    padding: 14px 42px;
+    border: 1px solid #e5e5e5;
+    border-radius: 40px;
+    color: #7e8482;
+}
+.header__contacts{
+    margin-left: auto;
+    display: flex;
+}
+.header__adress{
+    margin-right: 63px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    white-space: pre-line;
+}
+.header__callback{
+    text-align: end;
+}
+.header__phone{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+.header__callback-button{
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.header__bottom-bar{
+    padding: 24px 55px 24px 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__nav{
+    width: 71.5%;
+}
+.header__nav-list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.header__nav-item:not(:last-of-type){
+    margin-right: 10px;
+}
+.header__nav-link{
+    font-size: 18px;
+    line-height: 23px;
+    color: #696D6C;
+}
+.header__button{
+    width: 269px;
+    height: 62px;
+}
+
+/* First screen*/
+.offers__slide{
+    padding-left: 8%;
+    display: flex;
+    background: linear-gradient(96.56deg, rgba(242, 242, 242, 0) -17.38%, #F2F2F2 89.38%);
+}
+.offer__info{
+    padding: 64px 0;
+    max-width: 743px;
+    text-align: center;
+}
+.offer__heading{
+    display: block;
+}
+.offer__discount{
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 151px;
+    color: #E9341B;
+}
+.offer__description{
+    max-width: 582px;
+    margin: 32px 0px 32px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.offer__form{
+    max-width: 323px;
+    margin: 0 auto;
+}
+.offer__form-phone{
+    padding: 18px 24px 18px 54px;
+    width: 100%;
+    height: 59px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 40px;
+}
+.offer__form-button{
+    height: 62px;
+    margin: 16px 0px;
+}
+.offer__form-notice{
+    font-size: 14px;
+    line-height: 18px;
+    color: #4D4D4D;
+}
+.offer__image{
+    width: 57%;
+    background: url(/img/office.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+/*  Services  */
+.services__heading{
+    margin: 80px 0 65px;
+    text-align: center;
+}
+.services__list{
+    max-width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.service__card{
+    position: relative;
+    padding: 50px 50px;
+    width: 469px;
+    height: 354px;
+    background: #F8F8F8;
+    border-radius: 36px;
+}
+.service__card--large{
+    width: 100%;
+    grid-column: span 2;
+}
+.service__description{
+    margin-top: 8px;
+    white-space: pre-line;
+}
+.service__button-more{
+    position: absolute;
+    left: 50px;
+    bottom: 22px;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #28A167;
+    border-radius: 50%;
+}
+.service__image-bag{
+    position: absolute;
+    bottom: 28px;
+    left: 248px;
+    width: 248px;
+    height: 170px;
+}
