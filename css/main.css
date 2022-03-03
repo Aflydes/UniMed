@@ -391,7 +391,7 @@ a,p,span,li{
     padding: 50px;
     width: auto;
     height: 370px;
-    grid-column: 2 / 38;
+    grid-column: 2 / 60;
     grid-row: 1 / 3;
 }
 .stock__image-doctor{
