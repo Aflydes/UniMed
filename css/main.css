@@ -232,7 +232,7 @@ a,p,span,li{
 .offer__image{
     position: relative;
     width: 57%;
-    background:linear-gradient(90deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 23.76%), url(/img/office.jpg) no-repeat;
+    background:linear-gradient(90deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 23.76%), url(../img/office.jpg) no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -246,14 +246,14 @@ a,p,span,li{
 .offer__image::before{
     width: 412px;
     height: 418px;
-    background-image: url(/img/Vector.svg);
+    background-image: url(../img/Vector.svg);
     top: 0;
 }
 .offer__image::after{
     width: 591px;
     height: 600px;
     bottom: 0;
-    background-image: url(/img/Vector1.svg);
+    background-image: url(../img/Vector1.svg);
 }
 .slick-dots{
     position: absolute;
@@ -312,14 +312,14 @@ a,p,span,li{
     bottom: 0;
     width: 349px;
     height: 341px;
-    background-image: url(/img/Vector.svg);
+    background-image: url(../img/Vector.svg);
     z-index: 2;
     transform: rotate(90deg);
 }
 .service__card--large{
     width: 100%;
     grid-column: span 2;
-    background-image: url(/img/home.jpg);
+    background-image: url(../img/home.jpg);
 }
 .service__description{
     margin-top: 8px;
