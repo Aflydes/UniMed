@@ -8,6 +8,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <!-- Scripts -->
@@ -19,6 +20,11 @@
 <body>
     <header class="header">
         <div class="header__top-bar">
+            <div class="burger _lock-animation">
+                <div class="burger__line burger__line-one"></div>
+                <div class="burger__line burger__line-two"></div>
+                <div class="burger__line burger__line-three"></div>
+            </div>
             <div class="header__logo">
                 <object data="img/logo.svg" type="image/svg+xml"></object>
             </div>
@@ -38,6 +44,12 @@
             </div>
         </div>
         <div class="header__bottom-bar">
+            <div class="header__search search_pos_at_burger">
+                <input type="text" class="header__search-input" placeholder="Поиск по сайту...">
+                <svg class="header__search-icon" height="24" width="24">
+                    <use xlink:href="img/icons.svg#search"></use>
+                </svg>
+            </div>
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
@@ -73,11 +85,23 @@
     </header>
     <main>
         <div class="offers">
+            <div class="slick__arrows">
+                <div class="slick__arrow slick__arrow-left">
+                    <img src="img/arrow.png" alt="arrow">
+                </div>
+                <div class="slick__arrow slick__arrow-right">
+                    <img src="img/arrow.png" alt="arrow">
+                </div>
+            </div>
             <div class="offers__slider">
                 <div class="offers__slide">
+                    <div class="cross">
+                        <div class="cross-horizontal"></div>
+                        <div class="cross-vertical"></div>
+                    </div>
                     <div class="offer__info">
                         <h1 class="offer__heading">Скидка на первичный прием</h1>
-                        <p class="offer__discount discount">20%</p>
+                        <span class="offer__discount discount">20%</span>
                         <p class="offer__description">Узнайте полный план лечения, его примерную продолжительность,
                             количество визитов к врачу и стоимость</p>
                         <div class="offer__form">
@@ -93,8 +117,52 @@
                         
                     </div>
                 </div>
-                <div class="offers__slide"></div>
-                <div class="offers__slide"></div>
+                <div class="offers__slide">
+                    <div class="cross">
+                        <div class="cross-horizontal"></div>
+                        <div class="cross-vertical"></div>
+                    </div>
+                    <div class="offer__info">
+                        <h1 class="offer__heading">Скидка на первичный прием</h1>
+                        <span class="offer__discount discount">20%</span>
+                        <p class="offer__description">Узнайте полный план лечения, его примерную продолжительность,
+                            количество визитов к врачу и стоимость</p>
+                        <div class="offer__form">
+                            <input class="offer__form-phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                            <a href="#" class="button offer__form-button button--red">
+                                <span class="button__body">записаться на прием</span>
+                            </a>
+                            <p class="offer__form-notice">Нажимая на кнопкку получать рассылку, вы 
+                                соглашаетесь правилами конфиденцильности</p>
+                        </div>
+                    </div>
+                    <div class="offer__image">
+                        
+                    </div>
+                </div>
+                <div class="offers__slide">
+                    <div class="cross">
+                        <div class="cross-horizontal"></div>
+                        <div class="cross-vertical"></div>
+                    </div>
+                    <div class="offer__info">
+                        <h1 class="offer__heading">Скидка на первичный прием</h1>
+                        <span class="offer__discount discount">20%</span>
+                        <p class="offer__description">Узнайте полный план лечения, его примерную продолжительность,
+                            количество визитов к врачу и стоимость</p>
+                        <div class="offer__form">
+                            <input class="offer__form-phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                            <a href="#" class="button offer__form-button button--red">
+                                <span class="button__body">записаться на прием</span>
+                            </a>
+                            <p class="offer__form-notice">Нажимая на кнопкку получать рассылку, вы 
+                                соглашаетесь правилами конфиденцильности</p>
+                        </div>
+                    </div>
+                    <div class="offer__image">
+                        
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -203,7 +271,8 @@
             </div>
         </div>
     </main>
-			
+	<script src="/js/functions.js"></script>
+    <script src="/js/slider.js"></script>
     <footer class="footer">
         <div class="container"></div>
     </footer>
