@@ -6,7 +6,7 @@ h1{
 }
 h2{
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 45px;
     text-transform: uppercase;
 }
@@ -51,7 +51,7 @@ a,p,span,li{
 .text_color_red{
     color: #e9341b;
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: 500;
     line-height: inherit;
     text-transform: inherit;
 }
@@ -157,6 +157,7 @@ a,p,span,li{
     margin-top: 4px;
     font-size: 18px;
     line-height: 23px;
+    border-bottom: 1px dashed #28A267;
 }
 .header__bottom-bar{
     padding: 24px 55px 24px 62px;
@@ -277,6 +278,7 @@ a,p,span,li{
     position: absolute;
     top: calc(50% - 21px);
     z-index: 8;
+    cursor: pointer;
 }
 .slick__arrow-left{
     left: 50px;
@@ -418,6 +420,13 @@ a,p,span,li{
 }
 .stock__card-button{
     width: 269px;
+}
+.stock__link{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #28A167;
+    border-bottom: 1px dashed #28A167;
 }
 
 @media screen and (max-width: 1440px) {
