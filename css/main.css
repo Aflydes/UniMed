@@ -45,8 +45,30 @@ a,p,span,li{
 .button--green{
     background-color: #28a267;
 }
+.button--green:hover{
+    background: linear-gradient(107.8deg, #28A267 37.85%, #2E9262 74.68%);
+    box-shadow: 0px 0px 40px rgba(94, 236, 168, 0.35), 0px 2px 0px #145C3A;
+}
+.button--green:active{
+    background-color: #28a267;
+    box-shadow: none;
+}
+.button--green:active .button__body{
+    color: #C5F5DE;
+}
 .button--red{
     background-color: #e9341b;
+}
+.button--red:hover{
+    background: linear-gradient(92.35deg, #E9341B 6.1%, #D02E17 96.13%);
+    box-shadow: 0px 2px 0px #AD1C09, 0px 0px 40px rgba(242, 108, 90, 0.35);
+}
+.button--red:active{
+    background-color: #e9341b;
+    box-shadow: none;
+}
+.button--red:active .button__body{
+    color: #FFD7D1;
 }
 .text_color_red{
     color: #e9341b;
@@ -186,6 +208,9 @@ a,p,span,li{
 }
 
 /* First screen*/
+.offers{
+    position: relative;
+}
 .slick-track .offers__slide.slick-slide{
     position: relative;
     height: 600px;
@@ -417,6 +442,10 @@ a,p,span,li{
 .stock__short-description{
     margin: 16px 0;
     line-height: 20px;
+}
+.stock__card--large .stock__short-description{
+    font-size: 18px;
+    line-height: 23px;
 }
 .stock__card-button{
     width: 269px;
