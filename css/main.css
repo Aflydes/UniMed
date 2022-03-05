@@ -186,6 +186,9 @@ a,p,span,li{
 }
 
 /* First screen*/
+.offers{
+    position: relative;
+}
 .slick-track .offers__slide.slick-slide{
     position: relative;
     height: 600px;
