@@ -439,6 +439,9 @@ a,p,span,li{
 .stock__card--large .stock__card-content{
     max-width: 555px;
 }
+.stock__text{
+    display: flex;
+}
 .stock__short-description{
     margin: 16px 0;
     line-height: 20px;
