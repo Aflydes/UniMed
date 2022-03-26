@@ -21,6 +21,12 @@ h4{
     font-weight: 500;
     line-height: 30px;
 }
+h5{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
 a,p,span,li{
     font-size: 16px;
     font-weight: 400;
@@ -37,10 +43,26 @@ a,p,span,li{
     justify-content: center;
     align-items: center;
     border-radius: 40px;
+    border: none;
     text-transform: uppercase;
+    color: #ffffff;
 }
 .button__body{
     color: #ffffff;
+}
+.button--gray{
+    background-color: #4D4D4D;
+}
+.button--gray:hover{
+    background: linear-gradient(93.71deg, #4D4D4D 9.27%, #464646 96.5%);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25), 0px 2px 0px #282828;
+}
+.button--gray:active{
+    background-color: #4D4D4D;
+    box-shadow: none;
+}
+.button--gray:active .button__body{
+        color: #aaaaaa;
 }
 .button--green{
     background-color: #28a267;
@@ -77,6 +99,13 @@ a,p,span,li{
     line-height: inherit;
     text-transform: inherit;
 }
+.text--medium{
+    color: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: inherit;
+}
 .discount{
     font-size: 120px;
     font-weight: 700;
@@ -98,12 +127,78 @@ a,p,span,li{
 .cross-horizontal{
     transform: rotate(90deg);
 }
-
 ._scroll-lock{
     overflow: hidden;
 }
 .current_nav_link{
     font-weight: 500;
+}
+.cta{
+    position: relative;
+    padding: 73px 72px 50px;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(92.24deg, #28A167 -2.53%, #63E0A4 123.83%), linear-gradient(98.25deg, rgba(248, 248, 248, 0.6) 0%, #F8F8F8 100%);
+    border-radius: 36px;
+    overflow: hidden;
+}
+.cta-text, .cta-heading{
+    color: #ffffff;
+}
+.cta::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 533px;
+    height: 347px;
+    background: url(../img/form-blick.png);
+    z-index: 1;
+}
+.cta-image{
+    position: absolute;
+    z-index: 2;
+}
+.form{
+    display: grid;
+    gap: 16px;
+}
+.form-input{
+    position: relative;
+    padding: 18px 24px 18px 54px;
+    width: 323px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 40px;
+    z-index: 3;
+}
+.form-input::before{
+    content: '';
+    position: absolute;
+    left: 24px;
+}
+.form__button{
+    z-index: 3;
+}
+.form__accept-text{
+    max-width: 308px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: #FFFFFF;
+    z-index: 3;
+}
+.form-input__email::before{
+    width: 25px;
+    height: 18px;
+    background-image: url(../img/mai-icon.svg);
+}
+.form-input__name::before,
+.form-input__phone::before{
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/phone-icon.svg);
 }
 /*  header  */
 .header__top-bar{
@@ -391,7 +486,13 @@ a,p,span,li{
     bottom: 0;
     right: 52px;
 }
-
+.service__image-bear,
+.service__image-uzi,
+.service__image-chear{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 /*  Stocks  */
 .stocks{
     padding-bottom: 80px;
@@ -461,7 +562,535 @@ a,p,span,li{
     border-bottom: 1px dashed #28A167;
 }
 
+/*  Consultation  */ 
+.consultation{
+    padding-bottom: 80px;
+}
+.consultation__heading{
+    text-align: center;
+    margin-bottom: 62px;
+}
+.consultation__content,
+.diagnostic__content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.consultation__list-item,
+.diagnostic__list-item{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    border-bottom: 2px solid #28a26780;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+.consultation__list-item:before,
+.diagnostic__list-item::before{
+    content: '';
+    position: absolute;
+    right: -44px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #28A167;
+    transition: all 0.2s ease-in-out;
+}
+.consultation__list-item:hover,
+.diagnostic__list-item:hover{
+    color: #E9401B;
+    border-bottom: 2px solid #e9401b80;
+}
+.consultation__list-item:hover::before,
+.diagnostic__list-item:hover::before{ 
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: #E9401B;
+    border: 2px solid #FFFFFF;
+    -webkit-box-shadow: 0px 0px 22px 5px #e9401b;
+    -moz-box-shadow: 0px 0px 22px 5px #e9401b;
+    box-shadow: 0px 0px 22px 5px #e9401b;
+}
+.consultation__list-item--reverse::before,
+.diagnostic__list-item--reverse::before{
+    right: auto;
+    left: -44px;    
+}
+.endocrinologist{
+    top: 86px;
+    left: 291px;
+}
+.gastroenterologist{
+    top: 215px;
+    left: 165px;
+}
+.ultrasound{
+    top: 335.5px;
+    left: 125px;
+}
+.urologist{
+    bottom: 353.5px;
+    left: 220px;
+}
+.therapist{
+    bottom: 233.5px;
+    left: 240px;
+}
+.traumatologist{
+    bottom: 103.5px;
+    left: 220px;
+}
+.neurologist{
+    top: 338.5px;
+    right: 57px;
+}
+.pediatrician{
+    bottom: 350.5px;
+    right: 210px;
+}
+.doctor-zone-img{
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
+.doctor-zone-img.hidden{
+    opacity: 0;
+}
+.doctor-zone-img.visible{
+    opacity: 1;
+}
+.docor-zones{
+    position: relative;
+}
+.endocrinologist-zone{
+    top: 105px;
+    left: 307px;
+}
+.ultrasound-zone,
+.gastroenterologist-zone{
+    top: 225px;
+    left: 265px;
+}
+.urologist-zone{
+    left: 284px;
+    top: 220px;
+}
+.therapist-zone{
+    top: -26px;
+    left: 117px;
+}
+.traumatologist-zone{
+    top: -26px;
+    left: 14px;
+}
+
+/*  Technology  */
+.technology{
+    padding: 80px 0;
+    background-color: #FBFBFB;
+}
+.technology__heading{
+    margin-bottom: 62px;
+    text-align: center;
+}
+.technology__list{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.technology__card{
+    width: 347.25px;
+    display: flex;
+    flex-direction: column;
+}
+.technology__card-image{
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    background-color: #ffffff;
+}
+.technology__card-title{
+    margin: 32px 0 16px;
+    font-weight: 700;
+    flex-wrap: wrap;
+}
+
+/*  about  */
+.about{
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+.about__heading{
+    margin-bottom: 64px;
+    text-align: center;
+}
+.about__content{
+    margin-bottom: 80px;
+    display: flex;
+}
+.about__image{
+    margin-right: 90px;
+    width: 37.43%;
+    background: #F8F8F8;
+    border-radius: 36px;
+    overflow: hidden;
+}
+.about__description{
+    width: 56.38%;
+}
+.about__text{
+    font-size: 18px;
+    line-height: 23px;
+}
+.about__text.text--bold{
+    margin: 25px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25.14px;
+}
+.about__icons-list{
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+}
+.about__icon-card{
+    text-align: center;
+}
+.about__icon-card:nth-of-type(2){
+    margin: 0 64px;
+}
+.about__icon-text{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    white-space: pre-line;
+}
+.about__elipse{
+    position: absolute;
+    top: 150px;
+    left: -233px;
+    width: 642px;
+    height: 642px;
+    background: #F8F8F8;
+    border-radius: 50%;
+    z-index: -1;
+}
+.about__cta-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+.about__cta-heading{
+    margin-bottom: 16px;
+}
+.about__cta-text{
+    margin-bottom: 42px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    white-space: pre-line;
+}
+.about__cta-form .form-input__email{ 
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.about__cta-form .form__button{
+    width: 312px;
+    grid-row: 1/2;
+    grid-column: 2/2;
+}
+.about__cta-form .form__accept-text{
+    grid-row: 2/2;
+    grid-column: 2/2;
+}
+.about__cta-image{
+    width: 31%;
+    bottom: -4px;
+    left: 0;
+}
+
+/*  contacts  */
+.contacts{
+    position: relative;
+    overflow: hidden;
+}
+.contacts .container{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: calc((100% - 1440px)/2);
+    right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts__info,
+.contacts__appointment{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.contacts__appointment{
+    padding: 67px 0 66px;
+    max-width: 402px;
+}
+.contacts__appointment::before{
+    content: '';
+    position: absolute;
+    width: 588px;
+    height: 110%;
+    top: 0;
+    right: -70px;
+    background: linear-gradient(90deg, rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0) 0.01%, #F8F8F8 33.19%, #F8F8F8 77.71%, rgba(248, 248, 248, 0) 102.9%);
+    z-index: 1;
+}
+.contacts__appointment-text{
+    margin: 32px 0;
+    z-index: 2;
+}
+.contacts__appintment-heading,
+.contacts__apointment-form{
+    z-index: 2;
+}
+.contacts__apointment-form .form__button{
+    width: 323px;
+}
+.contacts__info{
+    padding: 70px 0;
+}
+.contacts__info::before{
+    content: '';
+    position: absolute;
+    width: 588px;
+    height: 110%;
+    top: 0;
+    left: -70px;
+    background: linear-gradient(90deg, #F8F8F8 84.24%, rgba(248, 248, 248, 0) 102.9%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: 1;
+}
+.contacts__info-heading{
+    z-index: 2;
+}
+.contacts__info-adress{
+    margin: 32px 0;
+    width: 233px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    z-index: 2;
+}
+.contacts__callback{
+    text-align: center;
+    z-index: 2;
+}
+.contacts__phone{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+.contacts__callback-button{
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 23px;
+    border-bottom: 1px dashed #28A267;
+}
+.contacts__info-email{
+    margin: 32px 0;
+    font-size: 18px;
+    line-height: 23px;
+    border-bottom: 1px dashed #28A267;
+    z-index: 2;
+}
+.contacts__info-icons{
+    display: flex;
+    z-index: 2;
+}
+.contacts__info-icon{
+    margin: 0 6px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #28A167;
+    border-radius: 50%;
+}
+.map{
+    width: 100%;
+    height: 495px;
+    filter: grayscale(1);
+}
+
+/* == page services ==  */
+/*  diagnostic  */
+.diagnostic__heading{
+    margin: 80px 0 63px;
+    text-align: center;
+}
+.clinical{
+    top: 86.5px;
+    left: 105px;
+}
+.infection{
+    bottom: 274.5px;
+    left: 180px;
+}
+.biochimestry{
+    top: 86.5px;
+    right: 135px;
+}
+.hormonical{
+    right: 95px;
+    bottom: 273.5px;
+}
+
+/*  services cta  */
+.service-page__cta{
+    margin: 80px 0;
+    max-width: 1440px;
+}
+.service-page__cta-image{
+    bottom: -6px;
+    left: 0;
+}
+.service-page__cta-content{
+    text-align: center;
+    z-index: 3;
+}
+.service-page__cta-heading{
+    z-index: 3;
+}
+.service-page__cta-text{
+    margin: 16px 0 42px;
+    z-index: 3;
+}
+.service-page__cta-form .form-input__name{
+    grid-row: 1/2;
+}
+.service-page__cta-form .form-input__phone{
+    grid-row: 1/2;
+}
+.service-page__cta-form .form__button{
+    width: 312px;
+    grid-row: 1/2;
+}
+.service-page__cta-form .form__accept-text{
+    grid-row: 2/2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    max-width: none;
+    text-align: left;
+}
+/*  footer  */
+.footer{
+    padding: 80px 0;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+}
+.footer__text{
+    margin-top: 36px;
+    max-width: 334px;
+    font-weight: 300;
+}
+.footer__heading{
+    margin-bottom: 24px;
+}
+.footer__link-list li:not(:last-child) {
+    margin-bottom: 14px;
+}
+.footer__link{
+    color: #000000;
+    border-bottom: 2px solid #28a26780;
+}
+.footer__button-q{
+    margin: 32px 0 16px;
+    width: 228px;
+}
+.footer__button-a{
+    width: 189px;
+}
+.footer__button-q .button__body,
+.footer__button-a .button__body{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+}
+.footer__adress{
+    margin-bottom: 32px;
+    width: 233px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    z-index: 2;
+}
+.footer__phone{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+.footer__callback-button{
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 23px;
+    border-bottom: 1px dashed #28A267;
+}
+.footer__email{
+    margin: 32px 0 16px;
+    width: fit-content;
+    font-size: 18px;
+    line-height: 23px;
+    border-bottom: 1px dashed #28A267;
+}
+.footer__icons{
+    display: flex;
+}
+.footer__icon{
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4d4d4d;
+    border-radius: 50%;
+}
+
+
 @media screen and (max-width: 1440px) {
+    .service-page__cta{
+        margin: 80px auto;
+        max-width: 90%;
+    }
+    .container{
+        margin: 0 auto;
+        max-width: 90%;
+    }
     .slick-track .offers__slide.slick-slide{
         padding-left: 100px;
     }
@@ -489,6 +1118,50 @@ a,p,span,li{
     .stock__card--large{
         grid-column: 1/3;
         grid-row: 2/3;
+    }
+    .contacts .container{
+        left: 5%;
+    }
+    .about__cta-form .form__button{
+        height: 58px;
+    }
+    .docor-zones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .clinical,
+    .infection{
+        left: 0;
+    }
+    .biochimestry,
+    .hormonical{
+        right: 0;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .service-page__cta{
+        justify-content: center;
+    }
+    .service-page__cta-image{
+        display: none;
+    }
+    .service-page__cta-form .form-input__name{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .service-page__cta-form .form-input__phone{
+        grid-row: 1/2;
+        grid-column: 2/2;
+    }
+    .service-page__cta-form .form__button{
+        grid-row: 2/2;
+        grid-column: 2/2;
+    }
+    .service-page__cta-form .form__accept-text{
+        max-width: 323px;
+        grid-row: 2/2;
+        grid-column: 1/2;
     }
 }
 @media screen and (max-width: 1140px) {
@@ -543,6 +1216,38 @@ a,p,span,li{
         left: 0;
         background: linear-gradient(90deg, #F7F7F7 0%, rgba(247, 247, 247, 30%) 100%), url(/img/office.jpg) no-repeat;
     }
+    .technology__list{
+        justify-content: space-evenly;
+    }
+    .about__content{
+        justify-content: center;
+    }
+    .about__image{
+        display: none;
+    }
+    .about__cta{
+        padding: 73px 32px 50px;
+    }
+    .map{
+        height: 400px;
+    }
+    .contacts .container{
+        position: relative;
+        left: auto;
+    }
+    .contacts__info::before,
+    .contacts__appointment::before{
+        content: none;
+    }
+    .footer .container{
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
+    .footer-col{
+        width: 50%;
+        align-items: center;
+        text-align: center;
+    }
 }
 @media screen and (max-width: 1024px) {
     .cross{
@@ -575,12 +1280,52 @@ a,p,span,li{
     }
     .discount{
         display: block;
+        font-size: 90px;
+        line-height: 90px;
     }
     .stock__image-doctor{
         width: 140px;
     }
     .stock__image-checkup{
         width: 120px;
+    }
+    .about__cta{
+        justify-content: center;
+    }
+    .about__cta-image{
+        display: none;
+    }
+    .docor-zones,
+    .diagnostic__content img{
+        display: none;
+    }
+    .consultation__list-item,
+    .diagnostic__list-item{
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        margin-bottom: 48px;
+        width: fit-content;
+    }
+    .consultation__doctor-list{
+        display: grid;
+        gap: 60px;
+        row-gap: 48px;
+    }
+    .consultation__list-item:nth-of-type(even){
+        margin-bottom: 0;
+        grid-column: 2/2;
+    }
+    .consultation__list-item:nth-of-type(odd){
+        margin-bottom: 0;
+        grid-column: 1/2;
+    }
+    .consultation__list-item::before,
+    .diagnostic__list-item::before{
+        right: auto;
+        left: -44px; 
     }
 }
 @media screen and (max-width: 860px) {
@@ -639,6 +1384,156 @@ a,p,span,li{
     }
     .stock__card:last-of-type{
         grid-row: 2;
+    }   
+}
+@media screen and (max-width: 768px){
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
+    .about__description{
+        width: 100%;
+    }
+    .about__icons-list{
+        justify-content: center;
+    }
+    .contacts .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contacts__appointment{
+        margin: 32px 0;
+        padding: 32px;
+        background-color: #f8f8f8;
+        border-radius: 36px;
+    }
+    .contacts__info{
+        padding: 0;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contacts__info-heading{
+        margin-bottom: 32px;
+        width: 100%;
+    }
+    .contacts__info-adress{
+        margin: 0;
+        width: 50%;
+        text-align: start;
+        white-space: pre-line;
+    }
+    .contacts__callback{
+        text-align: end;
+    }
+    .footer__about,
+    .footer__info{
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer__menu,
+    .footer__contacts{
+        align-items: flex-end;
+        text-align: end;
+    }
+}
+@media screen and (max-width: 500px){
+    .service__card,
+    .stock__card{
+        width: 100%;
+    }
+    .stock__card-content{
+        margin: 0;
+    }
+    .service__card img,
+    .stock__card img{
+        display: none;
+    }
+    .service__button-more{
+        position: relative;
+        margin-top: 20px;
+        left: auto;
+        bottom: auto;
+    }
+    .service__card{
+        padding: 20px;
+    }
+    .service__card,
+    .stock__card--large{
+        height: auto;
+    }
+    .stock__card--large .stock__short-description{
+        display: none;
+    }
+    .sctock__heading{
+        text-align: center;
+    }
+    .stock__text{
+        justify-content: center;
+    }
+    .discount{
+        font-size: 55px;
+    }
+    .about__icon-card:nth-of-type(2){
+        margin: 0 14px;
+    }
+    .contacts__info{
+        display: none;
+    }
+    .footer{
+        padding: 0 0 32px;
+    }
+    .footer__about{
+        width: 100%;
+    }
+    .footer__text{
+        max-width: none;
+    }
+    .footer__menu{
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer__info{
+        align-items: flex-end;
+        text-align: end;
+    }
+    .footer__contacts{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer__contacts .footer__heading{
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+    .footer__link-list li:not(:last-child){
+        margin-bottom: 6px;
+    }
+    .footer__adress{
+        margin: 0;
+        max-width: 125px;
+    }
+    .footer__email{
+        margin: 0;
+    }
+    .footer__button-q{
+        width: 189px;
+    }
+}
+@media screen and (max-width:400px){
+    .about__cta{
+        padding: 20px;
+    }
+    .form-input,
+    .form__button,
+    .about__cta-form .form__button{
+        margin: 0 auto;
+        width: 90%;
+    }
 }
