@@ -5,9 +5,11 @@ h1{
     text-transform: uppercase;
 }
 h2{
+    margin-bottom: 62px;
     font-size: 36px;
     font-weight: 300;
     line-height: 45px;
+    text-align: center;
     text-transform: uppercase;
 }
 h3{
@@ -33,6 +35,9 @@ a,p,span,li{
     line-height: 24px;
     color: #333635;
 }
+main{
+    overflow: hidden;
+}
 .container{
     margin: 0 auto;
     max-width: 1440px;
@@ -46,6 +51,7 @@ a,p,span,li{
     border: none;
     text-transform: uppercase;
     color: #ffffff;
+    
 }
 .button__body{
     color: #ffffff;
@@ -91,6 +97,14 @@ a,p,span,li{
 }
 .button--red:active .button__body{
     color: #FFD7D1;
+}
+.button--transparent{
+    background: transparent;
+    border: 2px solid #28A167;
+    color: #28A167;
+}
+.button--transparent .button__body{
+    color: #28A167;
 }
 .text_color_red{
     color: #e9341b;
@@ -142,7 +156,11 @@ a,p,span,li{
     border-radius: 36px;
     overflow: hidden;
 }
+.cta-content{
+    z-index: 3;
+}
 .cta-text, .cta-heading{
+    margin-bottom: 0;
     color: #ffffff;
 }
 .cta::before{
@@ -178,6 +196,7 @@ a,p,span,li{
     left: 24px;
 }
 .form__button{
+    width: 323px;
     z-index: 3;
 }
 .form__accept-text{
@@ -201,6 +220,9 @@ a,p,span,li{
     background-image: url(../img/phone-icon.svg);
 }
 /*  header  */
+header *{
+    z-index: 10;
+}
 .header__top-bar{
     padding: 28px 55px 29px 59px;
     display: flex;
@@ -495,11 +517,7 @@ a,p,span,li{
 }
 /*  Stocks  */
 .stocks{
-    padding-bottom: 80px;
-}
-.stocks__heading{
-    margin: 80px 0 62px;
-    text-align: center;
+    padding: 80px 0;
 }
 .stocks__list{
     max-width: fit-content;
@@ -566,19 +584,18 @@ a,p,span,li{
 .consultation{
     padding-bottom: 80px;
 }
-.consultation__heading{
-    text-align: center;
-    margin-bottom: 62px;
-}
 .consultation__content,
 .diagnostic__content{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
 }
 .consultation__list-item,
-.diagnostic__list-item{
+.diagnostic__list-item,
+.types__list-item{
     position: absolute;
     font-weight: 500;
     font-size: 20px;
@@ -589,7 +606,8 @@ a,p,span,li{
     z-index: 2;
 }
 .consultation__list-item:before,
-.diagnostic__list-item::before{
+.diagnostic__list-item::before,
+.types__list-item::before{
     content: '';
     position: absolute;
     right: -44px;
@@ -599,13 +617,11 @@ a,p,span,li{
     background: #28A167;
     transition: all 0.2s ease-in-out;
 }
-.consultation__list-item:hover,
-.diagnostic__list-item:hover{
+.consultation__list-item:hover{
     color: #E9401B;
     border-bottom: 2px solid #e9401b80;
 }
-.consultation__list-item:hover::before,
-.diagnostic__list-item:hover::before{ 
+.consultation__list-item:hover::before{ 
     top: 6px;
     width: 12px;
     height: 12px;
@@ -616,45 +632,46 @@ a,p,span,li{
     box-shadow: 0px 0px 22px 5px #e9401b;
 }
 .consultation__list-item--reverse::before,
-.diagnostic__list-item--reverse::before{
+.diagnostic__list-item--reverse::before,
+.types__list-item--revers::before{
     right: auto;
     left: -44px;    
 }
 .endocrinologist{
     top: 86px;
-    left: 291px;
+    left: -30px;
 }
 .gastroenterologist{
     top: 215px;
-    left: 165px;
+    left: -155px;
 }
 .ultrasound{
     top: 335.5px;
-    left: 125px;
+    left: -192px    ;
 }
 .urologist{
     bottom: 353.5px;
-    left: 220px;
+    left: -97px;
 }
 .therapist{
     bottom: 233.5px;
-    left: 240px;
+    left: -78px;
 }
 .traumatologist{
     bottom: 103.5px;
-    left: 220px;
+    left: -95px;
 }
 .neurologist{
     top: 338.5px;
-    right: 57px;
+    right: -260px;
 }
 .pediatrician{
     bottom: 350.5px;
-    right: 210px;
+    right: -110px;
 }
 .doctor-zone-img{
     position: absolute;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 .doctor-zone-img.hidden{
     opacity: 0;
@@ -686,15 +703,26 @@ a,p,span,li{
     top: -26px;
     left: 14px;
 }
+.lor-zone{
+    left: 310px;
+    top: 25px;
+}
+.phlebologist-zone{
+    left: 157px;
+}
+.dantist-zone{
+    top: 80px;
+    left: 323px;
+}
+.cardiolog-zone{
+    top: 152px;
+    left: 320px;
+}
 
 /*  Technology  */
 .technology{
     padding: 80px 0;
     background-color: #FBFBFB;
-}
-.technology__heading{
-    margin-bottom: 62px;
-    text-align: center;
 }
 .technology__list{
     display: flex;
@@ -726,10 +754,6 @@ a,p,span,li{
     position: relative;
     padding: 80px 0;
     overflow: hidden;
-}
-.about__heading{
-    margin-bottom: 64px;
-    text-align: center;
 }
 .about__content{
     margin-bottom: 80px;
@@ -789,7 +813,7 @@ a,p,span,li{
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 .about__cta-heading{
     margin-bottom: 16px;
@@ -944,58 +968,474 @@ a,p,span,li{
 }
 .clinical{
     top: 86.5px;
-    left: 105px;
+    left: -300px;
 }
 .infection{
     bottom: 274.5px;
-    left: 180px;
+    left: -225px;
 }
 .biochimestry{
     top: 86.5px;
-    right: 135px;
+    right: -275px;
 }
 .hormonical{
-    right: 95px;
+    right: -310px;
     bottom: 273.5px;
 }
 
 /*  services cta  */
 .service-page__cta{
-    margin: 80px 0;
+    margin: 80px auto;
     max-width: 1440px;
 }
 .service-page__cta-image{
     bottom: -6px;
     left: 0;
 }
-.service-page__cta-content{
+.service-page__cta-content
+.dentist-page__cta-content{
     text-align: center;
     z-index: 3;
 }
-.service-page__cta-heading{
+.dentist-page__cta-image{
+    bottom: -4px;
+    left: 80px;
+}
+.service-page__cta-heading,
+.dentist-page__cta-heading{
     z-index: 3;
 }
-.service-page__cta-text{
+.service-page__cta-text,
+.dentist-page__cta-text{
     margin: 16px 0 42px;
+    text-align: center;
     z-index: 3;
 }
-.service-page__cta-form .form-input__name{
+.service-page__cta-form .form-input__name,
+.dentist-page__cta-form .form-input__name{
     grid-row: 1/2;
 }
-.service-page__cta-form .form-input__phone{
+.service-page__cta-form .form-input__phone,
+.dentist-page__cta-form .form-input__phone{
     grid-row: 1/2;
 }
-.service-page__cta-form .form__button{
+.service-page__cta-form .form__button,
+.dentist-page__cta-form .form__button{
     width: 312px;
     grid-row: 1/2;
 }
-.service-page__cta-form .form__accept-text{
+.service-page__cta-form .form__accept-text,
+.dentist-page__cta-form .form__accept-text{
     grid-row: 2/2;
     grid-column-start: 1;
     grid-column-end: 3;
     max-width: none;
     text-align: left;
 }
+
+/*  == Analysis page ==  */
+/*  about  */
+.analysis-page__about{
+    position: relative;
+}
+.analysis-page__about .container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.analysis-page__about-description{
+    padding: 80px 0;
+    width: 50%;
+}
+.analysis-page__about-heading{
+    margin-bottom: 48px;
+    white-space: pre-line;
+}
+.analysis-page__about-text{
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 621px;
+}
+.analysis-page__about-text:first-of-type{
+    margin-bottom: 28px;
+}
+.analysis-page__about-image{
+    width: 50%;
+}
+.analysis-page__about-image img{
+    max-width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.image-blur-horizontal{
+    position: absolute;
+    top: -105px;
+    width: 1054px;
+    height: 203px;
+    background: #F8F8F8;
+    filter: blur(50px);
+}
+.image-blur-vertical{
+    position: absolute;
+    width: 822px;
+    height: 307px;
+    top: 0;
+    left: 75%;
+    background: #F8F8F8;
+    filter: blur(50px);
+    transform: rotate(90deg);
+}
+.analysis-page__types{
+    margin: 80px 0;
+}
+.analysis-page__types .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.analysis-page__types-heading{
+    margin-bottom: 62px;
+}
+.analysis-page__types-content{
+    position: relative;
+}
+.types__clinical{
+    top: 33.5px;
+    left: -146px;
+}
+.types__hormonical{
+    top: 104.4px;
+    left: -217px;
+}
+.types__gomeostaz{
+    top: 196.5px;
+    left: -255px;
+}
+.types__genetic{
+    top: 288.5px;
+    left: -220px;
+}
+.types__alegoric{
+    bottom: 220.5px;
+    left: -330px;
+}
+.types__gematology{
+    bottom: 128.5px;
+    left: -295px;
+}
+.types__complex{
+    bottom: 36.5px;
+    left: -297px;
+}
+.types__biochemestry{   
+    top: 33.5px;
+    right: -120px;
+}
+.types__bacteriology{
+    top: 104.4px;
+    right: -283px;
+}
+.types__gistology{
+    top: 196.5px;
+    right: -307px;
+}
+.types__pcr{
+    top: 288.5px;
+    right: -227px;
+}
+.types__onkomarker{
+    bottom: 220.5px;
+    right: -157px;
+}
+.types__immuno{
+    bottom: 128.5px;
+    right: -309px;
+}
+.types__express{
+    bottom: 36.5px;
+    right: -64px;
+}
+
+/*  pricing  */
+.prices{
+    padding: 80px 0 0;
+    background: linear-gradient(180deg, #F7F7F7 87.89%, rgba(247, 247, 247, 0) 100%);
+}
+.prices__tabel{
+    padding: 80px 60px;
+    background-color: #ffffff;
+}
+.prices__tabel-heading{
+    margin-top: 48px;
+    text-transform: uppercase;
+}
+.prices__tabel-heading:first-of-type{
+    margin-top: 0;
+}
+.prices__list li{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+.prices__service-name{
+    min-width: fit-content;
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+.dots{
+    width: calc(100% - 40px);
+    border-bottom: 1px dashed #4D4D4D;
+}
+.prices__service-price{
+    min-width: fit-content;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+}
+.prices__service-price.not-set{
+    font-style: italic;
+    font-weight: 400;
+    min-width: unset;
+}
+.prices__info-text{
+    margin: 62px 0 80px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+}
+.prices__searchbar-input{
+    margin-bottom: 16px;
+    padding: 14px 24px 14px 42px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+.prices__searchbar{
+    position: relative;
+}
+.prices__search-icon{
+    position: absolute;
+    right: 24px;
+    top: 12px;
+}
+/*  consultation page  */
+.consultation-page{
+    padding: 80px 0 90px;
+    background-image: url(../img/consultation-page-bg.png) no-repeat;
+}
+.consultation__list-item.ultrasound{
+    top: 243.5px;
+    right: -166px;
+    left: auto;
+}
+.consultation__list-item.lor{
+    top: 55.5px;
+    left: 117px;
+}
+.consultation__list-item.endocrinologist{
+    top: 139.5px;
+    left: -81px;
+}
+.consultation__list-item.therapist{
+    top: 237.5px;
+    bottom: auto;
+    left: -85px;
+}
+.consultation__list-item.gastroenterologist{
+    top: 354px;
+    left: -193px;
+}
+.consultation__list-item.urologist{
+    bottom: 357.5px;
+    left: -97px;
+}
+.consultation__list-item.phlebologist{
+    bottom: 252.5px;
+    left: -95px;
+}
+.consultation__list-item.traumatologist{
+    bottom: 149.5px;
+    left: -146px;
+}
+.consultation__list-item.dantist{
+    top: 49.5px;
+    right: 55px;
+}
+.consultation__list-item.cardiology{
+    top: 146.5px;
+    right: -46px;
+}
+.consultation__list-item.neurologist{
+    top: auto;
+    right: -266px;
+    bottom: 391.5px;
+}
+.consultation__list-item.pediatrician{
+    bottom: 289.5px;
+    right: -95px;
+}
+.consultation-page__cta{
+    margin: 90px auto 0;
+    padding: 42px 127px 39px;
+    max-width: 1440px;
+    
+}
+.consultation-page__cta-content{
+    z-index: 3;
+}
+.consultation-page__cta-heading{
+    text-align: center;
+    z-index: 3;
+}
+.consultation-page__cta-text{
+    margin: 18px 0 42px;
+    text-align: center;
+    z-index: 3;
+}
+.consultation-page__cta-image{
+    top: 16px;
+    left: 0;
+}
+.consultation-page .form-input__name{
+    grid-column: 1/2;
+}
+.consultation-page .form-input__phone{
+    grid-column: 2/2;
+}
+.consultation-page .form-input__select{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.consultation-page .form__button{
+    grid-row: 2/3;
+    grid-column: 2/2;
+}
+.consultation-page .form__accept-text{
+    max-width: none;
+    grid-row: 3/3;
+    grid-column-start: 1;
+    grid-column-end: 3  ;
+    text-align: left;
+}
+
+/*==  doctors  ==*/
+.doctors{
+    padding-top: 80px;
+    background: url(../img/consultation-page-bg.png) no-repeat;
+}
+.doctors__list{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.doctor__card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #F8F8F8;
+    border-radius: 36px;
+    transition: all 0.3s ease-in-out;
+}
+.doctor__card:hover{
+    background-color: #ffffff;
+    box-shadow: 0px 4px 60px rgba(51, 54, 53, 0.15);
+}
+.doctor__card:hover .doctor__image img{
+    filter: grayscale(0);
+}
+.doctor__image{
+    align-self: flex-end;
+}
+.doctor__image img{
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+.doctor__description{
+    padding: 50px 0;
+    width: 40%;
+}
+.doctor__name{
+    color: #333635;
+}
+.doctor__speciality{
+    margin: 8px 0 16px;
+    color: #696D6C;
+}
+.doctor__text{
+    margin-bottom: 36px;
+}
+.doctor__button {
+    width: 188px;
+    height: 54px;   
+}
+.main-directions{
+    padding: 80px 0;
+}
+.main-directions__content{
+    display: flex;
+    justify-content: space-between;
+}
+.main-direction__directions-heading{
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.main-direction__direction-item{
+    list-style:inside disc;
+    line-height: 32px;
+    max-width: 328.5px;
+}
+.dantist-consultation{
+    position: relative;
+    padding: 86px 0 69px;
+    background: url(../img/dantist-consultation-bg.png) no-repeat;
+}
+.dantist-consultation .container{
+    display: flex;
+}
+.dantist-consultation__heading{
+    margin-bottom: 48px;
+    text-align: left;
+}
+.dantist-consultation__description{
+    width: 43.12%;
+}
+.dantist-consultation__list-item{
+    margin: 0 0 28px 20px;
+    list-style: disc;
+    font-size: 18px;
+    line-height: 28px;
+}
+.dantist-consultation__image{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.dantist-consultation__image .image-blur-horizontal{
+    position: absolute;
+    width: 723px;
+    height: 290px;
+    top: -70px;
+    background: #F8F8F8;
+    filter: blur(40px);
+}
+.dantist-consultation__image .image-blur-vertical{
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 723px;
+    height: 253px;
+    background: #F8F8F8;
+    filter: blur(40px);
+    transform: rotate(90deg);
+}
+
 /*  footer  */
 .footer{
     padding: 80px 0;
@@ -1087,6 +1527,11 @@ a,p,span,li{
         margin: 80px auto;
         max-width: 90%;
     }
+    .consultation-page__cta{
+        margin: 80px auto 0;
+        padding: 42px 57px 39px;
+        max-width: 90%;
+    }
     .container{
         margin: 0 auto;
         max-width: 90%;
@@ -1138,30 +1583,50 @@ a,p,span,li{
     .hormonical{
         right: 0;
     }
+    .analysis-page__about-image img{
+        right: auto;
+        max-width: 100%;
+    }
+    .dantist-consultation__image{
+        width: 55%;
+    }
 }
 @media screen and (max-width: 1240px) {
-    .service-page__cta{
+    .service-page__cta,
+    .dentist-page__cta{
         justify-content: center;
     }
-    .service-page__cta-image{
+    .service-page__cta-image,
+    .dentist-page__cta-image{
         display: none;
     }
-    .service-page__cta-form .form-input__name{
+    .consultation-page__cta-image{
+        left: -80px;
+    }
+    .service-page__cta-form .form-input__name,
+    .dentist-page__cta-form .form-input__name{
         grid-row: 1/2;
         grid-column: 1/2;
     }
-    .service-page__cta-form .form-input__phone{
+    .service-page__cta-form .form-input__phone,
+    .dentist-page__cta-form .form-input__phone{
         grid-row: 1/2;
         grid-column: 2/2;
     }
-    .service-page__cta-form .form__button{
+    .service-page__cta-form .form__button,
+    .dentist-page__cta-form .form__button{
         grid-row: 2/2;
         grid-column: 2/2;
     }
-    .service-page__cta-form .form__accept-text{
+    .service-page__cta-form .form__accept-text,
+    .dentist-page__cta-form .form__accept-text{
         max-width: 323px;
         grid-row: 2/2;
         grid-column: 1/2;
+    }
+    .main-directions__content{
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
 @media screen and (max-width: 1140px) {
@@ -1174,7 +1639,7 @@ a,p,span,li{
     }
     .header__bottom-bar{
         position: absolute;
-        left: -100%;
+        left: -150%;
         width: 40%;
         height: 100%;
         display: block;
@@ -1248,6 +1713,15 @@ a,p,span,li{
         align-items: center;
         text-align: center;
     }
+    .dantist-consultation__image{
+        display: none;
+    }
+    .dantist-consultation__description{
+        width: 100%;
+    }
+    .doctors__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 @media screen and (max-width: 1024px) {
     .cross{
@@ -1300,7 +1774,19 @@ a,p,span,li{
         display: none;
     }
     .consultation__list-item,
-    .diagnostic__list-item{
+    .diagnostic__list-item,
+    .types__list-item,
+    .consultation__list-item.lor,
+    .consultation__list-item.endocrinologist,
+    .consultation__list-item.gastroenterologist,
+    .consultation__list-item.urologist,
+    .consultation__list-item.therapist,
+    .consultation__list-item.phlebologist,
+    .consultation__list-item.traumatologist,
+    .consultation__list-item.dantist,
+    .consultation__list-item.cardiology,
+    .consultation__list-item.neurologist,
+    .consultation__list-item.pediatrician{
         position: relative;
         top: auto;
         right: auto;
@@ -1323,9 +1809,28 @@ a,p,span,li{
         grid-column: 1/2;
     }
     .consultation__list-item::before,
-    .diagnostic__list-item::before{
+    .diagnostic__list-item::before,
+    .types__list-item::before{
         right: auto;
         left: -44px; 
+    }
+    .analysis-page__types-content img{
+        display: none;
+    }
+    .analysis-page__about-image{
+        display: none;
+    }
+    .analysis-page__about .container{
+        justify-content: center;
+    }
+    .analysis-page__about-description{
+        width: auto;
+    }
+    .consultation-page__cta-image{
+        display: none;
+    }
+    .consultation-page__cta{
+        justify-content: center;
     }
 }
 @media screen and (max-width: 860px) {
@@ -1438,6 +1943,15 @@ a,p,span,li{
         align-items: flex-end;
         text-align: end;
     }
+    .prices__tabel{
+        padding: 60px 32px;
+    }
+    .analysis-page__types-content{
+        padding-left: 50px
+    }
+    .doctor__image img{
+        filter: grayscale(0);
+    }
 }
 @media screen and (max-width: 500px){
     .service__card,
@@ -1524,6 +2038,27 @@ a,p,span,li{
     }
     .footer__button-q{
         width: 189px;
+    }
+    .prices__service-name{
+        min-width: auto;
+    }
+    .consultation__list-item:nth-of-type(odd),
+    .consultation__list-item:nth-of-type(even){
+        grid-column: 1/1;
+    }
+    .doctor__card{
+        flex-direction: column;
+    }
+    .doctor__description{
+        padding: 30px;
+        width: 100%;    
+    }
+    .doctor__image{
+        align-self: center;
+    }
+    .prices__service-price,
+    .prices__service-name{
+        font-size: 14px;
     }
 }
 @media screen and (max-width:400px){

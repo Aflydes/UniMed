@@ -37,3 +37,7 @@ $('.consultation__list-item').hover( function(){
         $('.' + hoverItem).toggleClass('visible');
     }
 });
+$('.doctor__card').hover(function(){
+    $(this).find('.doctor__button').toggleClass('button--transparent');
+    $(this).find('.doctor__button').toggleClass('button--green');
+})

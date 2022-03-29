@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f85c11f6-e031-4e15-af56-96c965180636&lang=ru_RU" type="text/javascript"></script>
+
+    <title>ЮниМед</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-bar">
+            <div class="burger _lock-animation">
+                <div class="burger__line burger__line-one"></div>
+                <div class="burger__line burger__line-two"></div>
+                <div class="burger__line burger__line-three"></div>
+            </div>
+            <div class="header__logo">
+                <a href="/">
+                    <svg width="200" height="46" viewBox="0 0 200 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4676 2.28632C12.4676 1.02362 13.4912 0 14.7539 0H25.1423C26.405 0 27.4287 1.02362 27.4287 2.28632V37.6099C27.4287 38.8726 26.405 39.8962 25.1423 39.8962H14.7539C13.4912 39.8962 12.4676 38.8726 12.4676 37.6099V2.28632Z" fill="#E5E5E5"/>
+                        <path d="M2.28632 12.4676C1.02362 12.4676 5.09288e-07 13.4912 4.54094e-07 14.7539L0 25.1423C-5.51943e-08 26.405 1.02362 27.4287 2.28632 27.4287L37.6099 27.4287C38.8726 27.4287 39.8962 26.405 39.8962 25.1423V14.7539C39.8962 13.4912 38.8726 12.4676 37.6099 12.4676L2.28632 12.4676Z" fill="#E5E5E5"/>
+                        <rect x="2.67969" y="1.25757" width="3.21513" height="8.57369" rx="1.60757" fill="#E9341B"/>
+                        <rect width="3.21513" height="8.57369" rx="1.60757" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 3.93677)" fill="#E9341B"/>
+                        <path d="M46.024 11.4087C39.0621 11.4087 33.0606 16.1299 31.4601 22.4516H27.6191V12.8891C27.6191 12.3289 27.179 11.8888 26.6189 11.8888H20.3772C19.8171 11.8888 19.377 12.3289 19.377 12.8891V38.8959C19.377 39.4561 19.8171 39.8962 20.3772 39.8962H26.6189C27.179 39.8962 27.6191 39.4561 27.6191 38.8959V29.3334H31.4601C33.0606 35.6551 39.0621 40.3363 46.024 40.3363C54.1461 40.3363 60.9879 33.8946 60.9879 25.8925C60.9879 17.8904 54.1461 11.4087 46.024 11.4087ZM46.024 33.2544C42.1029 33.2544 38.9021 29.9736 38.9021 25.8925C38.9021 21.8114 42.1029 18.4906 46.024 18.4906C49.945 18.4906 53.1058 21.8114 53.1058 25.8925C53.1058 29.9736 49.945 33.2544 46.024 33.2544Z" fill="#E9341B"/>
+                        <path d="M85.6204 18.6506H79.7388C79.1787 18.6506 78.7385 19.0907 78.7385 19.6509V25.8125H72.857V19.6509C72.857 19.0907 72.4169 18.6506 71.8567 18.6506H65.9752C65.415 18.6506 64.9749 19.0907 64.9749 19.6509V38.8959C64.9749 39.4561 65.415 39.8962 65.9752 39.8962H71.8567C72.4169 39.8962 72.857 39.4561 72.857 38.8959V32.6943H78.7385V38.8959C78.7385 39.4561 79.1787 39.8962 79.7388 39.8962H85.6204C86.1805 39.8962 86.6206 39.4561 86.6206 38.8959V19.6509C86.6206 19.0907 86.1805 18.6506 85.6204 18.6506Z" fill="#E9341B"/>
+                        <path d="M110.403 18.6106H106.201C105.521 18.6106 105.201 18.7306 104.641 19.4908C103.721 20.7712 98.8795 27.5329 98.8795 27.5329V19.6109C98.8795 19.0907 98.4394 18.6106 97.8792 18.6106H91.9977C91.4375 18.6106 90.9974 19.0907 90.9974 19.6109V38.8959C90.9974 39.4561 91.4375 39.8962 91.9977 39.8962C91.9977 39.8962 96.3588 39.8962 96.3988 39.8962C96.959 39.8962 97.199 39.8162 97.6391 39.176C98.2793 38.2958 103.521 30.9739 103.521 30.9739V38.8959C103.521 39.4561 103.961 39.8962 104.521 39.8962H110.403C110.963 39.8962 111.403 39.4561 111.403 38.8959V19.6109C111.403 19.0907 110.963 18.6106 110.403 18.6106Z" fill="#E9341B"/>
+                        <path d="M145.925 11.8889H141.203C140.523 11.8889 140.203 12.129 139.723 12.7291C139.283 13.3293 131.201 24.4122 131.201 24.4122C131.201 24.4122 123.159 13.3293 122.718 12.7291C122.238 12.129 121.918 11.8889 121.238 11.8889H116.517C115.957 11.8889 115.517 12.369 115.517 12.8892V38.896C115.517 39.4562 115.957 39.8963 116.517 39.8963H122.759C123.319 39.8963 123.759 39.4562 123.759 38.896V26.5328C123.759 26.5328 127.72 32.2543 128.4 33.2145C129.16 34.3748 129.6 34.2548 129.92 34.2548C130.24 34.2548 132.161 34.2548 132.521 34.2548C132.841 34.2548 133.281 34.3748 134.041 33.2145C134.682 32.2543 138.643 26.5328 138.643 26.5328V38.896C138.643 39.4562 139.123 39.8963 139.643 39.8963H145.925C146.445 39.8963 146.925 39.4562 146.925 38.896V12.8892C146.925 12.369 146.445 11.8889 145.925 11.8889Z" fill="#28A267"/>
+                        <path d="M169.491 31.6941C171.651 31.6941 171.851 31.014 171.851 29.2135C171.851 23.0519 168.13 18.0906 161.849 18.0906C154.647 18.0906 150.526 23.0519 150.526 29.2135C150.526 35.3751 154.687 40.3764 162.169 40.3764C164.93 40.3764 168.17 39.8963 170.491 38.4559C170.851 38.2159 171.131 37.7757 170.891 37.1356C170.691 36.6554 169.931 34.5749 169.771 34.1748C169.451 33.5746 168.891 33.5746 168.371 33.7747C166.93 34.4149 165.49 34.895 163.049 34.815C161.529 34.775 159.208 34.0948 158.408 31.6941C165.53 31.6941 168.611 31.6941 169.491 31.6941ZM161.849 23.612C163.729 23.612 164.69 25.2524 164.69 27.6931H158.248C158.248 25.2124 159.648 23.612 161.849 23.612Z" fill="#28A267"/>
+                        <path d="M199.04 33.0145H197.24V19.651C197.24 19.1308 196.8 18.6507 196.239 18.6507H180.435C179.875 18.6507 179.435 19.1308 179.435 19.651C179.435 19.651 179.795 27.1729 178.195 31.014C177.915 31.6541 177.595 32.3343 177.234 33.0145H175.634C175.074 33.0145 174.634 33.4546 174.634 34.0147V44.7376C174.634 45.2977 175.074 45.7378 175.634 45.7378H181.516C182.076 45.7378 182.516 45.2977 182.516 44.7376V39.8963H192.118V44.7376C192.118 45.2977 192.598 45.7378 193.119 45.7378H199.04C199.56 45.7378 200 45.2977 200 44.7376V34.0147C200 33.4546 199.56 33.0145 199.04 33.0145ZM185.797 31.134C186.037 30.0137 186.317 27.7331 186.517 25.5325H189.358V33.0145H185.197C185.437 32.4143 185.637 31.7742 185.797 31.134Z" fill="#28A267"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__search">
+                <input type="text" class="header__search-input" placeholder="Поиск по сайту...">
+                <svg class="header__search-icon" height="24" width="24">
+                    <use xlink:href="img/icons.svg#search"></use>
+                </svg>
+            </div>
+            <div class="header__contacts">
+                <p class="header__adress">Симферополь, ул.Ленина, 1
+                    8:00 - 20:00, без выходных</p>
+                <div class="header__callback">
+                    <a href="tel:+79999999999" class="header__phone">+7 (999) 999 - 99 - 99</a>
+                    <a href="#" class="header__callback-button">обратный звонок</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom-bar">
+            <div class="header__search search_pos_at_burger">
+                <input type="text" class="header__search-input" placeholder="Поиск по сайту...">
+                <svg class="header__search-icon" height="24" width="24">
+                    <use xlink:href="img/icons.svg#search"></use>
+                </svg>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link current_nav_link">Главная</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Услуги</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Лаборатория</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Врачи</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">О компании</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Дисконтная карта</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Новости и акции</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="button header__button button--green">
+                <span class="button__body">запись онлайн</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="dantists-page">
+        <div class="our-dantists doctors">
+            <div class="container">
+                <h2 class="doctors__heading">наши<span class="text_color_red"> стоматологи</span></h2>
+                <div class="doctors__content">
+                    <div class="doctors__list">
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Gasanov.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Гасанов Султан Аламдарович </h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Ynisli.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Юнисли Вафа Гераевна</h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Osmanova.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Османова Эльмаз Руслановна</h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Miruseinov.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Мирусеинов Ленмар Недимович</h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-directions">
+            <div class="container">
+                <h2 class="main-directions__heading">основные направления <span class="text_color_red"> стоматологии</span></h2>
+                <div class="main-directions__content">
+                    <div class="main-direction__directions">
+                        <h4 class="main-direction__directions-heading">Терапевтическая </h4>
+                        <ul class="main-direction__directions-list">
+                            <li class="main-direction__direction-item">лечение кариеса;</li>
+                            <li class="main-direction__direction-item">пломбирование зубов;</li>
+                            <li class="main-direction__direction-item">косметическая реставрация зубов;</li>
+                            <li class="main-direction__direction-item">лечение, обработка и пломбирование каналов;</li>
+                        </ul>
+                    </div>
+                    <div class="main-direction__directions">
+                        <h4 class="main-direction__directions-heading">Хирургическая</h4>
+                        <ul class="main-direction__directions-list">
+                            <li class="main-direction__direction-item">удалению зубов и их корней;</li>
+                            <li class="main-direction__direction-item">удалению камней из слюнных желёз;</li>
+                            <li class="main-direction__direction-item">челюстно-лицевой пластики;</li>
+                        </ul>
+                    </div>
+                    <div class="main-direction__directions">
+                        <h4 class="main-direction__directions-heading">Ортопедическая</h4>
+                        <ul class="main-direction__directions-list">
+                            <li class="main-direction__direction-item">несъемное протезирование;</li>
+                            <li class="main-direction__direction-item">частично-съемное протезирование;</li>
+                            <li class="main-direction__direction-item">съемное протезирование.</li>
+                        </ul>
+                    </div>
+                    <div class="main-direction__directions">
+                        <h4 class="main-direction__directions-heading">Имплантология</h4>
+                        <ul class="main-direction__directions-list">
+                            <li class="main-direction__direction-item">изготовление и установка зубных имплантов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dantist-consultation">
+            <div class="container">
+                <div class="dantist-consultation__description">
+                    <h2 class="dantist-consultation__heading"><span class="text_color_red"> консультация стоматолога </span>клиники «юнимед»</h2>
+                    <ul class="dantist-consultation__list">
+                        <li class="dantist-consultation__list-item">Наши специалисты помогут вам при любых проблемах с зубами. 
+                            Выберут оптимальную тактику лечения. Окажут хирургическую помощь.</li>
+                        <li class="dantist-consultation__list-item">Своевременнное обращение к хорошему врачу-стоматологу, 
+                            профессиональная диагностика и квалифицированное лечение в клинике «Юнимед» помогут избежать возможных осложнений.</li>
+                        <li class="dantist-consultation__list-item">В нашей клинике работают квалифицированные стоматологи, имеющие большой опыт лечения. 
+                            Получить консультации и профессиональное лечение вы можете даже в выходные дни.</li>
+                    </ul>
+                </div>
+                <div class="dantist-consultation__image">
+                    <img src="img/dantist-chear.png" alt="">
+                    <div class="image-blur-horizontal"></div>
+                    <div class="image-blur-vertical"></div>
+                </div>
+            </div>
+        </div>
+        <div class="dentist-page__prices prices">
+            <div class="container">
+                <h2 class="dentist-page__prices-heading prices-heading">ЦЕНЫ НА УСЛУГИ  <span class="text_color_red">стоматологии</span></h2>
+                <div class="adentist-page__prices-content prices__content">
+                    <div class="prices__searchbar">
+                        <input type="text" class="prices__searchbar-input" placeholder="Поиск по ключевым словам...">
+                        <svg class="prices__search-icon" height="24" width="24">
+                            <use xlink:href="img/icons.svg#search"></use>
+                        </svg>
+                    </div>
+                    <div class="prices__tabel">
+                        <h4 class="prices__tabel-heading">Точная диагностика</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">Удаление зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление ретинированного зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление осколка зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Резекция верхушки корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление нижних зубов</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление верхнего зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Наложение и снятие 1 шва</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                        </ul>
+                        <h4 class="prices__tabel-heading">Ортодонтологияи</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">Удаление зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление ретинированного зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление осколка зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Резекция верхушки корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление нижних зубов</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление верхнего зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Наложение и снятие 1 шва</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                        </ul>
+                        <h4 class="prices__tabel-heading">Чистка налета и зубного камня</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">Удаление зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление ретинированного зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление осколка зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Резекция верхушки корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление нижних зубов</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление верхнего зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Наложение и снятие 1 шва</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                        </ul>
+                        <h4 class="prices__tabel-heading">Удаление зуба</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">Удаление зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление ретинированного зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление осколка зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Резекция верхушки корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление корня зуба</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление нижних зубов</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Удаление верхнего зуба мудрости</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Наложение и снятие 1 шва</span> <div class="dots"></div> <span class="prices__service-price not-set">цену уточняйте у администратора</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="prices__info-text">* Данный прайс не является публичной офертой. Окончательные цены уточняйте по телефону +7 (999) 999-99-99 или у администраторов клиники.</p>
+                    <div class="dentist-page__cta cta">
+                        <div class="dentist-page__cta-image cta-image">
+                            <img src="img/tooth-big.png" alt="">
+                        </div>
+                        <div class="dentist-page__cta-content cta-content">
+                            <h2 class="dentist-page__cta-heading cta-heading">ЗАПИСАТЬСЯ<span class="text--medium"> К СТОМАТОЛОГУ</span></h2>
+                            <p class="dentist-page__cta-text cta-text">Оставьте заявку и мы ответим на все ваши вопросы</p>
+                            <form action="" class="dentist-page__cta-form form">
+                                <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
+                                <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                                <button href="#" class="button form__button button--red">
+                                    <span class="button__body">получить рассылку</span>
+                                </button>
+                                <p class="form__accept-text">Нажимая на кнопкку получать рассылку, вы соглашаетесь правилами конфиденцильности</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script src="js/functions.js"></script>
+<script src="js/slider.js"></script>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-col footer__about">
+            <div class="footer__logo">
+                <a href="/">
+                    <svg width="200" height="46" viewBox="0 0 200 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4676 2.28632C12.4676 1.02362 13.4912 0 14.7539 0H25.1423C26.405 0 27.4287 1.02362 27.4287 2.28632V37.6099C27.4287 38.8726 26.405 39.8962 25.1423 39.8962H14.7539C13.4912 39.8962 12.4676 38.8726 12.4676 37.6099V2.28632Z" fill="#E5E5E5"/>
+                        <path d="M2.28632 12.4676C1.02362 12.4676 5.09288e-07 13.4912 4.54094e-07 14.7539L0 25.1423C-5.51943e-08 26.405 1.02362 27.4287 2.28632 27.4287L37.6099 27.4287C38.8726 27.4287 39.8962 26.405 39.8962 25.1423V14.7539C39.8962 13.4912 38.8726 12.4676 37.6099 12.4676L2.28632 12.4676Z" fill="#E5E5E5"/>
+                        <rect x="2.67969" y="1.25757" width="3.21513" height="8.57369" rx="1.60757" fill="#E9341B"/>
+                        <rect width="3.21513" height="8.57369" rx="1.60757" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 3.93677)" fill="#E9341B"/>
+                        <path d="M46.024 11.4087C39.0621 11.4087 33.0606 16.1299 31.4601 22.4516H27.6191V12.8891C27.6191 12.3289 27.179 11.8888 26.6189 11.8888H20.3772C19.8171 11.8888 19.377 12.3289 19.377 12.8891V38.8959C19.377 39.4561 19.8171 39.8962 20.3772 39.8962H26.6189C27.179 39.8962 27.6191 39.4561 27.6191 38.8959V29.3334H31.4601C33.0606 35.6551 39.0621 40.3363 46.024 40.3363C54.1461 40.3363 60.9879 33.8946 60.9879 25.8925C60.9879 17.8904 54.1461 11.4087 46.024 11.4087ZM46.024 33.2544C42.1029 33.2544 38.9021 29.9736 38.9021 25.8925C38.9021 21.8114 42.1029 18.4906 46.024 18.4906C49.945 18.4906 53.1058 21.8114 53.1058 25.8925C53.1058 29.9736 49.945 33.2544 46.024 33.2544Z" fill="#E9341B"/>
+                        <path d="M85.6204 18.6506H79.7388C79.1787 18.6506 78.7385 19.0907 78.7385 19.6509V25.8125H72.857V19.6509C72.857 19.0907 72.4169 18.6506 71.8567 18.6506H65.9752C65.415 18.6506 64.9749 19.0907 64.9749 19.6509V38.8959C64.9749 39.4561 65.415 39.8962 65.9752 39.8962H71.8567C72.4169 39.8962 72.857 39.4561 72.857 38.8959V32.6943H78.7385V38.8959C78.7385 39.4561 79.1787 39.8962 79.7388 39.8962H85.6204C86.1805 39.8962 86.6206 39.4561 86.6206 38.8959V19.6509C86.6206 19.0907 86.1805 18.6506 85.6204 18.6506Z" fill="#E9341B"/>
+                        <path d="M110.403 18.6106H106.201C105.521 18.6106 105.201 18.7306 104.641 19.4908C103.721 20.7712 98.8795 27.5329 98.8795 27.5329V19.6109C98.8795 19.0907 98.4394 18.6106 97.8792 18.6106H91.9977C91.4375 18.6106 90.9974 19.0907 90.9974 19.6109V38.8959C90.9974 39.4561 91.4375 39.8962 91.9977 39.8962C91.9977 39.8962 96.3588 39.8962 96.3988 39.8962C96.959 39.8962 97.199 39.8162 97.6391 39.176C98.2793 38.2958 103.521 30.9739 103.521 30.9739V38.8959C103.521 39.4561 103.961 39.8962 104.521 39.8962H110.403C110.963 39.8962 111.403 39.4561 111.403 38.8959V19.6109C111.403 19.0907 110.963 18.6106 110.403 18.6106Z" fill="#E9341B"/>
+                        <path d="M145.925 11.8889H141.203C140.523 11.8889 140.203 12.129 139.723 12.7291C139.283 13.3293 131.201 24.4122 131.201 24.4122C131.201 24.4122 123.159 13.3293 122.718 12.7291C122.238 12.129 121.918 11.8889 121.238 11.8889H116.517C115.957 11.8889 115.517 12.369 115.517 12.8892V38.896C115.517 39.4562 115.957 39.8963 116.517 39.8963H122.759C123.319 39.8963 123.759 39.4562 123.759 38.896V26.5328C123.759 26.5328 127.72 32.2543 128.4 33.2145C129.16 34.3748 129.6 34.2548 129.92 34.2548C130.24 34.2548 132.161 34.2548 132.521 34.2548C132.841 34.2548 133.281 34.3748 134.041 33.2145C134.682 32.2543 138.643 26.5328 138.643 26.5328V38.896C138.643 39.4562 139.123 39.8963 139.643 39.8963H145.925C146.445 39.8963 146.925 39.4562 146.925 38.896V12.8892C146.925 12.369 146.445 11.8889 145.925 11.8889Z" fill="#28A267"/>
+                        <path d="M169.491 31.6941C171.651 31.6941 171.851 31.014 171.851 29.2135C171.851 23.0519 168.13 18.0906 161.849 18.0906C154.647 18.0906 150.526 23.0519 150.526 29.2135C150.526 35.3751 154.687 40.3764 162.169 40.3764C164.93 40.3764 168.17 39.8963 170.491 38.4559C170.851 38.2159 171.131 37.7757 170.891 37.1356C170.691 36.6554 169.931 34.5749 169.771 34.1748C169.451 33.5746 168.891 33.5746 168.371 33.7747C166.93 34.4149 165.49 34.895 163.049 34.815C161.529 34.775 159.208 34.0948 158.408 31.6941C165.53 31.6941 168.611 31.6941 169.491 31.6941ZM161.849 23.612C163.729 23.612 164.69 25.2524 164.69 27.6931H158.248C158.248 25.2124 159.648 23.612 161.849 23.612Z" fill="#28A267"/>
+                        <path d="M199.04 33.0145H197.24V19.651C197.24 19.1308 196.8 18.6507 196.239 18.6507H180.435C179.875 18.6507 179.435 19.1308 179.435 19.651C179.435 19.651 179.795 27.1729 178.195 31.014C177.915 31.6541 177.595 32.3343 177.234 33.0145H175.634C175.074 33.0145 174.634 33.4546 174.634 34.0147V44.7376C174.634 45.2977 175.074 45.7378 175.634 45.7378H181.516C182.076 45.7378 182.516 45.2977 182.516 44.7376V39.8963H192.118V44.7376C192.118 45.2977 192.598 45.7378 193.119 45.7378H199.04C199.56 45.7378 200 45.2977 200 44.7376V34.0147C200 33.4546 199.56 33.0145 199.04 33.0145ZM185.797 31.134C186.037 30.0137 186.317 27.7331 186.517 25.5325H189.358V33.0145H185.197C185.437 32.4143 185.637 31.7742 185.797 31.134Z" fill="#28A267"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__text">Все материалы данного сайта являются объектами авторского права (в том числе дизайн). 
+                Запрещается копирование, распространение (в том числе путем копирования на другие сайты и ресурсы в Интернете) 
+                или любое иное использование информации и объектов без предварительного письменного согласия правообладателя. 
+                Указание ссылки на источник информации является обязательным</p>
+        </div>
+        <div class="footer-col footer__menu">
+            <h5 class="footer__heading">меню</h5>
+            <ul class="footer__link-list">
+                <li>
+                    <a href="/" class="footer__link">Главная</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Услуги</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Лаборатория</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Врачи</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">О компании</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Дисконтная карта</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Новости и акции</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-col footer__info">
+            <h5 class="footer__heading">информация</h5>
+            <ul class="footer__link-list">
+                <li>
+                    <a href="#" class="footer__link">Вакансии</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Уведомление на медицинскую деятельность</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">Политика обработки персональных данных</a>
+                </li>
+            </ul>
+            <a href="#" class="button footer__button-q button--gray">
+                <span class="button__body">остались вопросы?</span>
+            </a>
+            <a href="#" class="button footer__button-a button--green">
+                <span class="button__body">запись онлайн</span>
+            </a>
+        </div>
+        <div class="footer-col footer__contacts">
+            <h5 class="footer__heading">контакты</h5>
+            <p class="footer__adress">Симферополь, ул.Ленина, 1
+                8:00 - 20:00, без выходных</p>
+            <div class="footer__callback">
+                <a href="tel:+79999999999" class="footer__phone">+7 (999) 999 - 99 - 99</a>
+                <a href="#" class="footer__callback-button">обратный звонок</a>
+            </div>
+            <a href="mailto:welcome@unimed.ru" class="footer__email">welcome@unimed.ru</a>
+            <div class="footer__icons">
+                <a href="" class="footer__icon">
+                    <svg class="vk-icon" height="12" width="19">
+                        <use xlink:href="img/icons.svg#vk"></use>
+                    </svg>
+                </a>
+                <a href="" class="footer__icon">
+                    <svg class="inst-icon" height="21" width="21">
+                        <use xlink:href="img/icons.svg#inst"></use>
+                    </svg>
+                </a>                        
+                <a href="" class="footer__icon">
+                    <svg class="fb-icon" height="16" width="16">
+                        <use xlink:href="img/icons.svg#fb"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
