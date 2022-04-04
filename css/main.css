@@ -51,7 +51,6 @@ main{
     border: none;
     text-transform: uppercase;
     color: #ffffff;
-    
 }
 .button__body{
     color: #ffffff;
@@ -120,6 +119,13 @@ main{
     line-height: inherit;
     text-transform: inherit;
 }
+.text--bold{
+    color: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    text-transform: inherit;
+}
 .discount{
     font-size: 120px;
     font-weight: 700;
@@ -154,7 +160,6 @@ main{
     justify-content: flex-end;
     background: linear-gradient(92.24deg, #28A167 -2.53%, #63E0A4 123.83%), linear-gradient(98.25deg, rgba(248, 248, 248, 0.6) 0%, #F8F8F8 100%);
     border-radius: 36px;
-    overflow: hidden;
 }
 .cta-content{
     z-index: 3;
@@ -166,11 +171,12 @@ main{
 .cta::before{
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: 0;
     width: 533px;
     height: 347px;
     background: url(../img/form-blick.png);
+    border-radius: 0 0 0 9%;
     z-index: 1;
 }
 .cta-image{
@@ -189,11 +195,14 @@ main{
     border: 1px solid #E5E5E5;
     border-radius: 40px;
     z-index: 3;
+    transition: color .2s ease-in-out;
 }
-.form-input::before{
-    content: '';
-    position: absolute;
-    left: 24px;
+.form-input:focus{
+    font-weight: 500;
+    color: #000000;
+}
+.form-input:focus+.form-input__icon{
+    color: #4D4D4D;
 }
 .form__button{
     width: 323px;
@@ -208,17 +217,34 @@ main{
     color: #FFFFFF;
     z-index: 3;
 }
-.form-input__email::before{
-    width: 25px;
-    height: 18px;
-    background-image: url(../img/mai-icon.svg);
+.form-input__inner{
+    position: relative;
 }
-.form-input__name::before,
-.form-input__phone::before{
-    width: 20px;
-    height: 20px;
-    background-image: url(../img/phone-icon.svg);
+.form-input__icon{
+    position: absolute;
+    top: 19.5px;
+    left: 24px;
+    z-index: 4;
+    color: #E5E5E5;
+    transition: color .2s ease-in-out;
 }
+.form-input__inner.success .form-input__icon{
+    color: #28A167;
+}
+.form-input__inner.error .form-input{
+    border: 1px solid #e9341b80;
+    color: #E9341B;
+}
+.form-input__inner.error .form-input__icon{
+    color: #E9341B;
+}
+.person-icon{
+    top: 18.5px;
+}
+.mail-icon{
+    top: 22px;
+}
+
 /*  header  */
 header *{
     z-index: 10;
@@ -323,7 +349,49 @@ header *{
 .header__button{
     width: 269px;
 }
+.breadcrumb{
+    background-color: #f8f8f8;
+    z-index: 3;
+}
+.breadcrumb *{
+    z-index: 3;
+}
+.breadcrumb__list{
+    padding: 11px 62px;
+    display: flex;
+}
+.breadcrumb__item{
+    position: relative;
+    margin-right: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #696D6C;
+}
+.breadcrumb__item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #696D6C;
+}
+.breadcrumb__item.current{
+    margin-right: 0;
+    text-decoration: none;
+}
+.breadcrumb__item:before{
+    content: '/';
+    position: absolute;
+    right: -26px;
+    top: 5px;
 
+}
+.breadcrumb__item.current::before,
+.breadcrumb__item.current::after{
+    content: none;
+}
 /* First screen*/
 .offers{
     position: relative;
@@ -479,8 +547,19 @@ header *{
     justify-content: center;
     align-items: center;
     border: 3px solid #28A167;
+    color: #28A167;
     border-radius: 50%;
     z-index: 7;
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
+}
+.service__button-more:hover{
+    background-color: #28a167;
+    color: #ffffff;
+}
+.service__button-more:active{
+    background-color: #2E9262;
+    color: #C5F5DE;
 }
 .service__image-bag{
     position: absolute;
@@ -590,8 +669,7 @@ header *{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
-    margin: 0 auto;
+    width: 100%;
 }
 .consultation__list-item,
 .diagnostic__list-item,
@@ -639,35 +717,35 @@ header *{
 }
 .endocrinologist{
     top: 86px;
-    left: -30px;
+    left: 20.3%;
 }
 .gastroenterologist{
     top: 215px;
-    left: -155px;
+    left: 11.5%;
 }
 .ultrasound{
     top: 335.5px;
-    left: -192px    ;
+    left: 9%;
 }
 .urologist{
     bottom: 353.5px;
-    left: -97px;
+    left: 15.5%;
 }
 .therapist{
     bottom: 233.5px;
-    left: -78px;
+    left: 17%;
 }
 .traumatologist{
     bottom: 103.5px;
-    left: -95px;
+    left: 15.5%;
 }
 .neurologist{
     top: 338.5px;
-    right: -260px;
+    right: 4%;
 }
 .pediatrician{
     bottom: 350.5px;
-    right: -110px;
+    right: 14.5%;
 }
 .doctor-zone-img{
     position: absolute;
@@ -714,7 +792,7 @@ header *{
     top: 80px;
     left: 323px;
 }
-.cardiolog-zone{
+.cardiologist-zone{
     top: 152px;
     left: 320px;
 }
@@ -968,18 +1046,18 @@ header *{
 }
 .clinical{
     top: 86.5px;
-    left: -300px;
+    left: 7%;
 }
 .infection{
     bottom: 274.5px;
-    left: -225px;
+    left: 12.5%;
 }
 .biochimestry{
     top: 86.5px;
-    right: -275px;
+    right: 9.5%;
 }
 .hormonical{
-    right: -310px;
+    right: 7%;
     bottom: 273.5px;
 }
 
@@ -987,13 +1065,39 @@ header *{
 .service-page__cta{
     margin: 80px auto;
     max-width: 1440px;
+    overflow: hidden;
+}
+.us-page__cta,
+.diagnostic-services__cta{
+    margin: 80px 0;
+    overflow: hidden;
+}
+.ha-page__cta{
+    margin: 84px 0 62px;
+    overflow: hidden;
 }
 .service-page__cta-image{
     bottom: -6px;
     left: 0;
 }
+.us-page__cta-image{
+    bottom: -5px;
+    left: 0;
+    
+}
+.ha-page__cta-image{
+    top: 0;
+    left: 0;
+}
+.diagnostic-services__cta-image{
+    left: 0;
+    bottom: 0;
+}
 .service-page__cta-content
-.dentist-page__cta-content{
+.dentist-page__cta-content,
+.us-page__cta-content,
+.ha-page__cta-content,
+.diagnostic-services__cta-content{
     text-align: center;
     z-index: 3;
 }
@@ -1002,30 +1106,48 @@ header *{
     left: 80px;
 }
 .service-page__cta-heading,
-.dentist-page__cta-heading{
+.dentist-page__cta-heading,
+.us-page__cta-heading,
+.ha-page__cta-heading,
+.diagnostic-services__cta-heading{
     z-index: 3;
 }
 .service-page__cta-text,
-.dentist-page__cta-text{
+.dentist-page__cta-text,
+.us-page__cta-text,
+.ha-page__cta-text,
+.diagnostic-services__cta-text{
     margin: 16px 0 42px;
     text-align: center;
     z-index: 3;
 }
 .service-page__cta-form .form-input__name,
-.dentist-page__cta-form .form-input__name{
+.dentist-page__cta-form .form-input__name,
+.us-page__cta-form .form-input__name,
+.ha-page__cta-form .form-input__name,
+.diagnostic-services__cta-form .form-input__name{
     grid-row: 1/2;
 }
 .service-page__cta-form .form-input__phone,
-.dentist-page__cta-form .form-input__phone{
+.dentist-page__cta-form .form-input__phone,
+.us-page__cta-form .form-input__phone,
+.ha-page__cta-form .form-input__phone,
+.diagnostic-services__cta-form .form-input__phone{
     grid-row: 1/2;
 }
 .service-page__cta-form .form__button,
-.dentist-page__cta-form .form__button{
+.dentist-page__cta-form .form__button,
+.us-page__cta-form .form__button,
+.ha-page__cta-form .form__button,
+.diagnostic-services__cta-form .form__button{
     width: 312px;
     grid-row: 1/2;
 }
 .service-page__cta-form .form__accept-text,
-.dentist-page__cta-form .form__accept-text{
+.dentist-page__cta-form .form__accept-text,
+.us-page__cta-form .form__accept-text,
+.ha-page__cta-form .form__accept-text,
+.diagnostic-services__cta-form .form__accept-text{
     grid-row: 2/2;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -1101,62 +1223,65 @@ header *{
 }
 .analysis-page__types-content{
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .types__clinical{
     top: 33.5px;
-    left: -146px;
+    left: 18%;
 }
 .types__hormonical{
     top: 104.4px;
-    left: -217px;
+    left: 13.3%;
 }
 .types__gomeostaz{
     top: 196.5px;
-    left: -255px;
+    left: 10.5%;
 }
 .types__genetic{
     top: 288.5px;
-    left: -220px;
+    left: 13%;
 }
 .types__alegoric{
     bottom: 220.5px;
-    left: -330px;
+    left: 5.3%;
 }
 .types__gematology{
     bottom: 128.5px;
-    left: -295px;
+    left: 7.8%;
 }
 .types__complex{
     bottom: 36.5px;
-    left: -297px;
+    left: 7.3%;
 }
 .types__biochemestry{   
     top: 33.5px;
-    right: -120px;
+    right: 20%;
 }
 .types__bacteriology{
     top: 104.4px;
-    right: -283px;
+    right: 9%;
 }
 .types__gistology{
     top: 196.5px;
-    right: -307px;
+    right: 7%;
 }
 .types__pcr{
     top: 288.5px;
-    right: -227px;
+    right: 12.5%;
 }
 .types__onkomarker{
     bottom: 220.5px;
-    right: -157px;
+    right: 17.3%;
 }
 .types__immuno{
     bottom: 128.5px;
-    right: -309px;
+    right: 6.8%;
 }
 .types__express{
     bottom: 36.5px;
-    right: -64px;
+    right: 23.6%;
 }
 
 /*  pricing  */
@@ -1188,6 +1313,7 @@ header *{
 }
 .dots{
     width: calc(100% - 40px);
+    height: 28px;
     border-bottom: 1px dashed #4D4D4D;
 }
 .prices__service-price{
@@ -1200,7 +1326,6 @@ header *{
 .prices__service-price.not-set{
     font-style: italic;
     font-weight: 400;
-    min-width: unset;
 }
 .prices__info-text{
     margin: 62px 0 80px;
@@ -1228,64 +1353,67 @@ header *{
 /*  consultation page  */
 .consultation-page{
     padding: 80px 0 90px;
-    background-image: url(../img/consultation-page-bg.png) no-repeat;
+    background: url(../img/consultation-page-bg.png) no-repeat;
+    background-size: contain;
 }
-.consultation__list-item.ultrasound{
+.consultation-page .ultrasound{
     top: 243.5px;
-    right: -166px;
+    right: 10.7%;
     left: auto;
 }
-.consultation__list-item.lor{
+.consultation-page .lor{
     top: 55.5px;
-    left: 117px;
+    left: 30%;
 }
-.consultation__list-item.endocrinologist{
+.consultation-page .endocrinologist{
     top: 139.5px;
-    left: -81px;
+    left: 16.5%;
 }
-.consultation__list-item.therapist{
+.consultation-page .therapist{
     top: 237.5px;
     bottom: auto;
-    left: -85px;
+    left: 16%;
 }
-.consultation__list-item.gastroenterologist{
+.consultation-page .gastroenterologist{
     top: 354px;
-    left: -193px;
+    left: 8.7%;
 }
-.consultation__list-item.urologist{
+.consultation-page .urologist{
     bottom: 357.5px;
-    left: -97px;
+    left: 15.6%;
 }
-.consultation__list-item.phlebologist{
+.consultation-page .phlebologist{
     bottom: 252.5px;
-    left: -95px;
+    left: 16%;
 }
-.consultation__list-item.traumatologist{
+.consultation-page .traumatologist{
     bottom: 149.5px;
-    left: -146px;
+    left: 12%;
 }
-.consultation__list-item.dantist{
+.consultation-page .dantist{
     top: 49.5px;
-    right: 55px;
+    right: 26%;
 }
-.consultation__list-item.cardiology{
+.consultation-page .cardiology{
     top: 146.5px;
-    right: -46px;
+    right: 19%;
 }
-.consultation__list-item.neurologist{
+.consultation-page .neurologist{
     top: auto;
-    right: -266px;
+    right: 4%;
     bottom: 391.5px;
 }
-.consultation__list-item.pediatrician{
+.consultation-page .pediatrician{
     bottom: 289.5px;
-    right: -95px;
+    right: 16%;
 }
 .consultation-page__cta{
     margin: 90px auto 0;
     padding: 42px 127px 39px;
     max-width: 1440px;
-    
+}
+.consultation-page__cta::before{
+    bottom: 0;
 }
 .consultation-page__cta-content{
     z-index: 3;
@@ -1303,21 +1431,21 @@ header *{
     top: 16px;
     left: 0;
 }
-.consultation-page .form-input__name{
+.consultation-page__cta .form-input__name{
     grid-column: 1/2;
 }
-.consultation-page .form-input__phone{
+.consultation-page__cta .form-input__phone{
     grid-column: 2/2;
 }
-.consultation-page .form-input__select{
+.consultation-page__cta .form-input__select{
     grid-row: 2/3;
     grid-column: 1/2;
 }
-.consultation-page .form__button{
+.consultation-page__cta .form__button{
     grid-row: 2/3;
     grid-column: 2/2;
 }
-.consultation-page .form__accept-text{
+.consultation-page__cta .form__accept-text{
     max-width: none;
     grid-row: 3/3;
     grid-column-start: 1;
@@ -1327,8 +1455,9 @@ header *{
 
 /*==  doctors  ==*/
 .doctors{
-    padding-top: 80px;
-    background: url(../img/consultation-page-bg.png) no-repeat;
+    padding: 80px 0;
+    background: url(../img/dantist-consultation-bg.png) no-repeat;
+    background-position: 50% -230px;
 }
 .doctors__list{
     display: grid;
@@ -1336,6 +1465,7 @@ header *{
     grid-template-columns: repeat(2, 1fr);
 }
 .doctor__card{
+    height: 425px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -1351,6 +1481,7 @@ header *{
     filter: grayscale(0);
 }
 .doctor__image{
+    max-width: 60%;
     align-self: flex-end;
 }
 .doctor__image img{
@@ -1376,7 +1507,7 @@ header *{
     height: 54px;   
 }
 .main-directions{
-    padding: 80px 0;
+    padding: 0 0 80px 0;
 }
 .main-directions__content{
     display: flex;
@@ -1396,17 +1527,26 @@ header *{
     padding: 86px 0 69px;
     background: url(../img/dantist-consultation-bg.png) no-repeat;
 }
-.dantist-consultation .container{
+.us-consultation{
+    position: relative;
+    padding: 86px 0 69px;
+    background: url(../img/us-about-bg.png) no-repeat;
+}
+.dantist-consultation .container,
+.us-consultation .container{
     display: flex;
 }
-.dantist-consultation__heading{
+.dantist-consultation__heading,
+.us-consultation__heading{
     margin-bottom: 48px;
     text-align: left;
 }
-.dantist-consultation__description{
+.dantist-consultation__description,
+.us-consultation__description{
     width: 43.12%;
 }
-.dantist-consultation__list-item{
+.dantist-consultation__list-item,
+.us-consultation__list-item{
     margin: 0 0 28px 20px;
     list-style: disc;
     font-size: 18px;
@@ -1414,8 +1554,13 @@ header *{
 }
 .dantist-consultation__image{
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
+}
+.us-consultation__image{
+    position: absolute;
+    right: 10%;
+    bottom: 0;
 }
 .dantist-consultation__image .image-blur-horizontal{
     position: absolute;
@@ -1425,7 +1570,8 @@ header *{
     background: #F8F8F8;
     filter: blur(40px);
 }
-.dantist-consultation__image .image-blur-vertical{
+.dantist-consultation__image .image-blur-vertical,
+.us-consultation__image .image-blur-vertical{
     position: absolute;
     top: 30%;
     left: 45%;
@@ -1434,6 +1580,325 @@ header *{
     background: #F8F8F8;
     filter: blur(40px);
     transform: rotate(90deg);
+}  
+  .select {
+    width: 320px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .select.active .select-panel svg:first-child rect {
+    fill: #28A167;
+  }
+  
+  .select.active .select-panel svg:last-child {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  
+  .select-panel {
+    padding: 20px 24px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .select-panel svg {
+    -webkit-transition: 250ms;
+    transition: 250ms;
+  }
+  
+  .select-panel svg rect {
+    -webkit-transition: 250ms;
+    transition: 250ms;
+  }
+  
+  .select-panel svg:first-child {
+    position: absolute;
+    top: 21px;
+    left: 25px;
+  }
+  
+  .select-panel svg:last-child {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+  }
+  
+  .select-panel__option {
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  .select-dropdown {
+    width: 100%;
+    background: #fff;
+    border-radius: 36px;
+    padding: 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+  }
+  
+  .select-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .select-dropdown__option {
+    padding: 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+  }
+  
+  .select-dropdown__option:hover {
+    background: #f5f1f1;
+  }
+main.consultation-page{
+    overflow: visible;
+}
+
+/*==  Home admission page ha-page* ==*/
+.ha-page__services-text{
+    margin-bottom: 48px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.ha-page__services .service__description{
+    max-width: 208px;
+    white-space: normal;
+}
+.service__image-injection,
+.service__image-droppers,
+.service__image-dressings{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.service__image-droppers{
+    right: 40px;
+}
+.service__image-dressings{
+    bottom: 60px;
+}
+.ha-page__advantages{
+    margin: 80px 0 71px;
+}
+.ha-page__advantages-heading{
+    margin-bottom: 80px;
+}
+.ha-page__advantages-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.advantage__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.advantage__text{
+    font-weight: 400;
+    line-height: 34px;
+    white-space: pre-line;
+}
+.ihd{
+    position: relative;
+    margin: 0 auto;
+    padding: 0 0 77px;
+    max-width: 1023px;
+}
+.ihd__heading{
+    margin-bottom: 48px;
+}
+
+.ihd__callback-phone{
+    margin: 77px 0 32px;
+    padding: 0 8.5px;
+    display: block;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    color: #333635;
+}
+.ihd__inner{
+    max-width: fit-content;
+}
+.ihd__image{
+    position: absolute;
+    right: -11%;
+    bottom: 0;
+}
+/*  diagnostic services  */
+.diagnostic-services__about,
+.laser-page__about{
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.26087) 23.09%, #FFFFFF 100%), url(../img/us-about-bg.png) no-repeat;
+}
+.diagnostic-services__about .container {
+    padding: 86px 0 80px;
+    display: flex;
+}
+.diagnostic-services__about-description{
+    max-width: 621px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+}
+.diagnostic-services__about-heading{
+    white-space: pre-line;
+    text-align: left;
+    margin-bottom: 48px;
+}
+.diagnostic-services__about-text{
+    margin-bottom: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.diagnostic-services__about-image{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.diagnostic-services__about-image img{
+    max-height: 556px;
+}
+.prices__price-info{
+    margin-left: 20px;
+    display: grid;
+    width: fit-content;
+    text-align: end;
+}
+.prices__price-info{
+    display: flex;
+}
+.prices__price-info div{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+.prices__price-info .prices__service-price{
+    margin: 0;
+}
+.prices__price-info .prices__additional-price{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+}
+.prices__price-info .prices__waiting-time{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+.prices__price-info .prices__button{
+    margin-left: 20px;  
+    width: 200px;
+    min-width: 200px;
+    height: 54px;
+}
+/*  laser therapy*/
+.laser-page__about .container{
+    padding: 86px 0 97px;
+}
+.laser-page__about-description{
+    max-width: 621px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+}
+.laser-page__about-heading{
+    white-space: pre-line;
+    text-align: left;
+    margin-bottom: 48px;
+    z-index: 3;
+}
+.laser-page__about-text{
+    margin-bottom: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    z-index: 3;
+}
+.laser-page__about-image{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.laser-page__about-image .image-blur-vertical {
+    left: -30%;
+    top: 140px;
+}
+.laser-page .consultation-page__cta{
+    margin-bottom: 83px;
+}
+/* doctors page */
+.doctors__show-more{
+    margin: 60px auto 0;
+    width: 193px;
+    height: 54px;
+
+}
+.doctors-page .service-page__cta{
+    margin: 0 auto 80px;
+}
+/*  single doctor page*/
+.single-doctor__info{
+    background-image: url(../img/consultation-page-bg.png);
+}
+.single-doctor__info .container{
+    margin-top: 60px;
+    background: #F8F8F8;
+    border-radius: 36px;
+    max-width: 1374px;
+}
+.single-doctor__image{
+    width: 40.97%;
+    text-align: center;
+    background: url(../img/single-doctor-image-bg.png);
+}
+.single-doctor__description{
+    width: 59.03%;
+}
+.single-doctor__main-info{
+    display: flex;
+}
+.single-doctor__description{
+    padding: 50px 48px 0 80px;
+}
+.single-doctor__name{
+    font-weight: 700;
+}
+.single-doctor__page .service-page__cta{
+    margin-top: 0;
 }
 
 /*  footer  */
@@ -1540,7 +2005,7 @@ header *{
         padding-left: 100px;
     }
     .button{
-        height: 50px;
+        height: 58px;
     }
     .header__top-bar,.header__bottom-bar{
         padding: 20px 55px;
@@ -1590,36 +2055,146 @@ header *{
     .dantist-consultation__image{
         width: 55%;
     }
+    .prices__tabel-heading{
+        position: relative;
+        padding-right: 44px;
+        max-width: fit-content;
+        cursor: pointer;
+    }
+    .prices__tabel-heading::before,
+    .prices__tabel-heading::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: calc(50% - 1px);
+        height: 3px;
+        width: 12px;
+        background-color: #333635;
+        transition: transform 0.5s ease-in-out;
+    }
+    .prices__tabel-heading::before{
+        transform: rotate(45deg);
+        right: 8px;
+    }
+    .prices__tabel-heading::after{
+        transform: rotate(-45deg);
+    }
+    .collapsed.prices__tabel-heading::before{
+        transform: rotate(-45deg);
+    }
+    .collapsed.prices__tabel-heading::after{
+        transform: rotate(45deg);
+    }
+    .prices__list{
+        height: auto;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    .collapsed.prices__list{
+        height: 0;
+        opacity: 0;
+    }
+    .us-page__prices .prices__service-name{
+        min-width: auto;
+        max-width: 80%;
+    }
+    .us-page__prices .prices__service-price{
+        min-width: fit-content;
+    }
+    .diagnostic-services__about-image{
+        right: -19%;
+    }
+    .diagnostic-services__prices .prices__service-name{
+        max-width: 50%;
+        min-width: unset;
+    }
+    .laser-page__about-image{
+        right: -65px;
+    }
+}
+@media screen and (max-width: 1320px){
+    .main-page .consultation .consultation__list-item--reverse,
+    .types__list-item,
+    .diagnostic__list-item,
+    .consultation-page .lor,
+    .consultation-page .endocrinologist,
+    .consultation-page .gastroenterologist,
+    .consultation-page .urologist,
+    .consultation-page .therapist,
+    .consultation-page .phlebologist,
+    .consultation-page .traumatologist{
+        left: auto;
+        right: 5%;
+        margin-bottom: 48px;
+        width: fit-content;
+    }
+    .main-page .consultation__list-item,
+    .types__list-item--revers,
+    .diagnostic__list-item--reverse,
+    .consultation-page .dantist,
+    .consultation-page .cardiology,
+    .consultation-page .neurologist,
+    .consultation-page .pediatrician,
+    .consultation-page .ultrasound{
+        left: 5%;
+        right: auto;
+    }
+    .main-page .consultation .consultation__list-item--reverse::before{
+        right: -44px;
+        left: auto;
+    }
+    .main-page .consultation__list-item::before {
+        left: -44px;
+        right: auto;
+    }
 }
 @media screen and (max-width: 1240px) {
     .service-page__cta,
-    .dentist-page__cta{
+    .dentist-page__cta,
+    .us-page__cta,
+    .ha-page__cta,
+    .diagnostic-services__cta{
         justify-content: center;
     }
     .service-page__cta-image,
-    .dentist-page__cta-image{
+    .dentist-page__cta-image,
+    .us-page__cta-image,
+    .ha-page__cta-image,
+    .diagnostic-services__cta-image{
         display: none;
     }
     .consultation-page__cta-image{
         left: -80px;
     }
     .service-page__cta-form .form-input__name,
-    .dentist-page__cta-form .form-input__name{
+    .dentist-page__cta-form .form-input__name,
+    .us-page__cta-form .form-input__name,
+    .ha-page__cta-form .form-input__name,
+    .diagnostic-services__cta-form .form-input__name{
         grid-row: 1/2;
         grid-column: 1/2;
     }
     .service-page__cta-form .form-input__phone,
-    .dentist-page__cta-form .form-input__phone{
+    .dentist-page__cta-form .form-input__phone,
+    .us-page__cta-form .form-input__phone,
+    .ha-page__cta-form .form-input__phone,
+    .diagnostic-services__cta-form .form-input__phone{
         grid-row: 1/2;
         grid-column: 2/2;
     }
     .service-page__cta-form .form__button,
-    .dentist-page__cta-form .form__button{
+    .dentist-page__cta-form .form__button,
+    .us-page__cta-form .form__button,
+    .ha-page__cta-form .form__button,
+    .diagnostic-services__cta-form .form__button{
         grid-row: 2/2;
         grid-column: 2/2;
     }
     .service-page__cta-form .form__accept-text,
-    .dentist-page__cta-form .form__accept-text{
+    .dentist-page__cta-form .form__accept-text,
+    .us-page__cta-form .form__accept-text,
+    .ha-page__cta-form .form__accept-text,
+    .diagnostic-services__cta-form .form__accept-text{
         max-width: 323px;
         grid-row: 2/2;
         grid-column: 1/2;
@@ -1628,6 +2203,10 @@ header *{
         flex-wrap: wrap;
         gap: 20px;
     }
+    .laser-page__about-image{
+        display: none;
+    }
+
 }
 @media screen and (max-width: 1140px) {
     .header__search{
@@ -1690,7 +2269,7 @@ header *{
     .about__image{
         display: none;
     }
-    .about__cta{
+    .cta{
         padding: 73px 32px 50px;
     }
     .map{
@@ -1713,10 +2292,12 @@ header *{
         align-items: center;
         text-align: center;
     }
-    .dantist-consultation__image{
+    .dantist-consultation__image,
+    .us-consultation__image{
         display: none;
     }
-    .dantist-consultation__description{
+    .dantist-consultation__description,
+    .us-consultation__description{
         width: 100%;
     }
     .doctors__list{
@@ -1773,20 +2354,20 @@ header *{
     .diagnostic__content img{
         display: none;
     }
-    .consultation__list-item,
+    .main-page .consultation .consultation__list-item,
     .diagnostic__list-item,
     .types__list-item,
-    .consultation__list-item.lor,
-    .consultation__list-item.endocrinologist,
-    .consultation__list-item.gastroenterologist,
-    .consultation__list-item.urologist,
-    .consultation__list-item.therapist,
-    .consultation__list-item.phlebologist,
-    .consultation__list-item.traumatologist,
-    .consultation__list-item.dantist,
-    .consultation__list-item.cardiology,
-    .consultation__list-item.neurologist,
-    .consultation__list-item.pediatrician{
+    .consultation-page .lor,
+    .consultation-page .endocrinologist,
+    .consultation-page .gastroenterologist,
+    .consultation-page .urologist,
+    .consultation-page .therapist,
+    .consultation-page .phlebologist,
+    .consultation-page .traumatologist,
+    .consultation-page .dantist,
+    .consultation-page .cardiology,
+    .consultation-page .neurologist,
+    .consultation-page .pediatrician{
         position: relative;
         top: auto;
         right: auto;
@@ -1810,7 +2391,8 @@ header *{
     }
     .consultation__list-item::before,
     .diagnostic__list-item::before,
-    .types__list-item::before{
+    .types__list-item::before,
+    .main-page .consultation .consultation__list-item--reverse::before{
         right: auto;
         left: -44px; 
     }
@@ -1832,6 +2414,15 @@ header *{
     .consultation-page__cta{
         justify-content: center;
     }
+    .prices__service-price.not-set{
+        min-width: unset;
+    }
+    .doctor__card{
+        height: auto;
+    }
+    .diagnostic-services__about-image{
+        display: none;
+    }
 }
 @media screen and (max-width: 860px) {
     .header__contacts{
@@ -1840,6 +2431,10 @@ header *{
         transition: all .6s ease 0s;
     }
     .header__contacts.active{
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
         height: auto;
         opacity: 1;
     }
@@ -1889,7 +2484,16 @@ header *{
     }
     .stock__card:last-of-type{
         grid-row: 2;
-    }   
+    }
+    .ihd__inner{
+        margin: 0 auto;
+    }
+    .ihd__callback-phone{
+        margin:32px 0;
+    }
+    .ihd__image{
+        display: none;
+    }
 }
 @media screen and (max-width: 768px){
     .form{
@@ -1951,6 +2555,40 @@ header *{
     }
     .doctor__image img{
         filter: grayscale(0);
+    }
+    .doctor__description{
+        width: 60%;
+    }
+    .diagnostic-services__prices .prices__list li{
+        flex-direction: column;
+        align-items: start;
+    }
+    .diagnostic-services__prices .dots{
+        display: none;
+    }
+    .diagnostic-services__prices .prices__service-name{
+        max-width: 100%;
+    }
+    .prices__price-info{
+        margin: 10px 0 0;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .prices__price-info div{
+        text-align: start;
+    }
+    .prices__price-info .prices__service-price,
+    .prices__price-info .prices__additional-price{
+        margin-right: 10px;
+    }
+    .prices__price-info .prices__button{
+        margin: 0;
+    }
+    .consultation-page__cta::before{
+        content: none;
     }
 }
 @media screen and (max-width: 500px){
@@ -2060,8 +2698,27 @@ header *{
     .prices__service-name{
         font-size: 14px;
     }
+    .ihd__callback-phone{
+        font-size: 30px;
+    }
+    .cta{
+        padding: 73px 24px 50px;
+    }
+    .cta-content{
+        width: 100%;
+    }
+    .service-page__cta-form .form__button, 
+    .dentist-page__cta-form .form__button, 
+    .us-page__cta-form .form__button, 
+    .ha-page__cta-form .form__button,
+    .diagnostic-services__cta-form .form__button{
+        width: 100%;
+    }
 }
 @media screen and (max-width:400px){
+    h2{
+        font-size: 28px;
+    }
     .about__cta{
         padding: 20px;
     }
@@ -2070,5 +2727,19 @@ header *{
     .about__cta-form .form__button{
         margin: 0 auto;
         width: 90%;
+    }
+    .ihd__callback-phone{
+        font-size: 26px;
+    }
+    .doctor__image img{
+        height: 210px;
+    }
+    .consultation-page__cta .form-input,
+    .consultation-page__cta .form__button,
+    .consultation-page__cta .form-input__inner{
+        width: 100%;
+    }
+    .select{
+        width: 100%;
     }
 }

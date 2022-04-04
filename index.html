@@ -67,7 +67,7 @@
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link current_nav_link">Главная</a>
+                        <a href="/" class="header__nav-link current_nav_link">Главная</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="#" class="header__nav-link">Услуги</a>
@@ -97,7 +97,7 @@
             </a>
         </div>
     </header>
-    <main>
+    <main class="main-page">
         <div class="offers">
             <div class="slick__arrows">
                 <div class="slick__arrow slick__arrow-left">
@@ -118,14 +118,19 @@
                         <span class="offer__discount discount">20%</span>
                         <p class="offer__description">Узнайте полный план лечения, его примерную продолжительность,
                             количество визитов к врачу и стоимость</p>
-                        <div class="offer__form">
-                            <input class="offer__form-phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                        <form class="offer__form">
+                            <div class="form-input__inner">
+                                <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                                <svg class="phone-icon form-input__icon" width="20" height="21">
+                                    <use xlink:href="img/icons.svg#phone"></use>
+                                </svg>
+                            </div> 
                             <a href="#" class="button offer__form-button button--red">
                                 <span class="button__body">записаться на прием</span>
                             </a>
                             <p class="offer__form-notice">Нажимая на кнопкку получать рассылку, вы 
                                 соглашаетесь правилами конфиденцильности</p>
-                        </div>
+                            </form>
                     </div>
                     <div class="offer__image">
                         
@@ -413,8 +418,13 @@
                         <p class="about__cta-text cta-text">Подпишитесь на нашу рассылку и узнавайте первым
                             актуальную информацию о нашей клинике</p>
                         <form action="" class="about__cta-form form">
-                            <input type="email" class="form-input form-input__email" placeholder="ваш_адрес@email.com">
-                            <button href="#" class="button form__button button--red">
+                            <div class="form-input__inner">
+                                <input type="email" class="form-input form-input__email" placeholder="ваш_адрес@email.com">
+                                <svg class="mail-icon form-input__icon" width="25" height="18">
+                                    <use xlink:href="img/icons.svg#mail"></use>
+                                </svg>
+                            </div>
+                            <button type="submit"  class="button form__button button--red">
                                 <span class="button__body">получить рассылку</span>
                             </button>
                             <p class="form__accept-text">Нажимая на кнопкку получать рассылку, вы 
@@ -436,9 +446,19 @@
                     <p class="contacts__appointment-text">Оставьте свои контакты и наш менеджер
                         запишет вас на прием в любое удобное время</p>
                     <form action="" class="contacts__apointment-form form">
-                        <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
-                        <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
-                        <button href="#" class="button form__button button--red">
+                        <div class="form-input__inner">
+                            <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
+                            <svg class="person-icon form-input__icon" width="20" height="24">
+                                <use xlink:href="img/icons.svg#person"></use>
+                            </svg>
+                        </div>
+                        <div class="form-input__inner">
+                            <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                            <svg class="phone-icon form-input__icon" width="20" height="21">
+                                <use xlink:href="img/icons.svg#phone"></use>
+                            </svg>
+                        </div>     
+                        <button type="submit" class="button form__button button--red">
                             <span class="button__body">записаться на прием</span>
                         </button>
                     </form>

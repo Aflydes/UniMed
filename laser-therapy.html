@@ -67,7 +67,7 @@
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link current_nav_link">Главная</a>
+                        <a href="/" class="header__nav-link current_nav_link">Главная</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="#" class="header__nav-link">Услуги</a>
@@ -96,8 +96,207 @@
                 <span class="button__body">запись онлайн</span>
             </a>
         </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Главная</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Услуги</a></li>
+              <li class="breadcrumb__item current"><a class="breadcrumb__link" href="#" aria-current="location">Лазерная терапия</a></li>
+            </ul>
+          </nav>
     </header>
 
+    <main class="laser-page">
+        <div class="laser-page__about">
+            <div class="container">
+                <div class="laser-page__about-description">
+                    <h2 class="laser-page__about-heading"><span class="text_color_red">лазерная терапия</span>
+                        клиники «юнимед»</h2>
+                    <p class="laser-page__about-text">
+                        Современную медицину невозможно представить без анализов. Лабораторная диагностика дает до 70% информации о состоянии здоровья человека. 
+                        Качественно проведенный лабораторный анализ - залог точно поставленного диагноза и своевременно начатого лечения.</p>
+                    <p class="laser-page__about-text">Высокоточное оборудование последнего поколения, используемое лабораториями Юни-Мед, 
+                        позволяет проводить исследования в автоматическом режиме и в кратчайшие сроки. 
+                        Все исследования выполняются на автоматических анализаторах закрытого типа с использованием фирменных реагентов и калибраторов.</p>
+                </div>
+                <div class="laser-page__about-image">
+                    <img src="img/laser-therapy.png" alt="">
+                    <div class="image-blur-vertical"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="laser-page__prices prices">
+            <div class="container">
+                <h2 class="laser-page__prices-heading prices-heading">Стоимость <span class="text_color_red">анализов</span></h2>
+                <div class="laser-page__prices-content prices__content">
+                    <div class="prices__searchbar">
+                        <input type="text" class="prices__searchbar-input" placeholder="Поиск по ключевым словам...">
+                        <svg class="prices__search-icon" height="24" width="24">
+                            <use xlink:href="img/icons.svg#search"></use>
+                        </svg>
+                    </div>
+                    <div class="prices__tabel">
+                        <h4 class="prices__tabel-heading">Дерматология/косметология</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">Папилома</span> <div class="dots"></div> <span class="prices__service-price">600 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Поверхностный невус</span> <div class="dots"></div> <span class="prices__service-price">1 500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Глубокий невус</span> <div class="dots"></div> <span class="prices__service-price">2 200 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Гемангиома</span> <div class="dots"></div> <span class="prices__service-price">1 200 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Дерматофиброма</span> <div class="dots"></div> <span class="prices__service-price">2 500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Бородавка</span> <div class="dots"></div> <span class="prices__service-price">1 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Кератома до 0,5 см</span> <div class="dots"></div> <span class="prices__service-price">1 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Кератома более 0,5-1 см</span> <div class="dots"></div> <span class="prices__service-price"> от 1 500 ₽</span>
+                            </li>
+                        </ul>
+                        <h4 class="prices__tabel-heading">Нейрохирургия</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">Лечение межпозвонковых грыж</span> <div class="dots"></div> <span class="prices__service-price">500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Лечение тройничного нерва</span> <div class="dots"></div> <span class="prices__service-price">400 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="prices__info-text">* Данный прайс не является публичной офертой. Окончательные цены уточняйте по телефону +7 (999) 999-99-99 или у администраторов клиники.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="consultation-page__cta cta">
+            <div class="consultation-page__cta-image cta-image">
+                <img src="img/forms-chear.png" alt="">
+            </div>
+            <div class="consultation-page__cta-content cta-content">
+                <h2 class="consultation-page__cta-heading cta-heading">запись <span class="text--medium">на консультацию</span></h2>
+                <p class="consultation-page__cta-text cta-text">Оставьте заявку и мы запишем вас на консультацию в удобное время</p>
+                <form action="" class="consultation-page__cta-form form">
+                    <div class="form-input__inner form-input__name">
+                        <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
+                        <svg class="person-icon form-input__icon" width="20" height="24">
+                            <use xlink:href="img/icons.svg#person"></use>
+                        </svg>
+                    </div>
+                    <div class="form-input__inner form-input__phone">
+                        <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                        <svg class="phone-icon form-input__icon" width="20" height="21">
+                            <use xlink:href="img/icons.svg#phone"></use>
+                        </svg>
+                    </div>
+                    <div class="form-input__inner form-input__select">
+                        <div class="select">
+                            <div class="select-panel">
+                                <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="6.32031" y="0.5" width="6.3595" height="20" fill="#E5E5E5"/>
+                                    <rect x="19" y="7.15289" width="6.69422" height="19" transform="rotate(90 19 7.15289)" fill="#E5E5E5"/>
+                                </svg>
+                    
+                                <div class="select-panel__option">выберите врача</div>
+                    
+                                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.18549 6.763C7.03351 6.90601 6.79245 6.99186 6.58393 7C6.34997 6.99756 6.15221 6.9229 5.98255 6.7632L0.441352 1.51365C0.0814786 1.21566 0.0828998 0.617541 0.410226 0.272925C0.737333 -0.0718951 1.31935 -0.100174 1.64424 0.246682L6.58393 4.86173L11.5238 0.246682C11.8487 -0.100174 12.428 -0.0718949 12.7554 0.272721C13.0825 0.617327 13.0898 1.20688 12.7267 1.51345L7.18549 6.763Z" fill="#28A167"/>
+                                </svg>
+                            </div>
+                            <div class="select-dropdown">
+                                <div class="select-dropdown__option">Гастроэнтеролог</div>
+                                <div class="select-dropdown__option">Педиатр</div>
+                                <div class="select-dropdown__option">Невропатолог</div>
+                                <div class="select-dropdown__option">Невропатолог (детский)</div>
+                                <div class="select-dropdown__option">Ортопед-травматолог</div>
+                                <div class="select-dropdown__option">УЗИ-диагностика</div>
+                                <div class="select-dropdown__option">Терапевт</div>
+                                <div class="select-dropdown__option">Уролог</div>
+                                <div class="select-dropdown__option">Эндокринолог</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="button form__button button--red">
+                        <span class="button__body">записаться на прием</span>
+                    </button>
+                    <p class="form__accept-text">Нажимая на кнопкку получать рассылку, вы 
+                        соглашаетесь правилами конфиденцильности</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="laser-page__doctors doctors">
+            <div class="container">
+                <h2 class="doctors__heading">наши<span class="text_color_red"> специалисты</span></h2>
+                <div class="doctors__content">
+                    <div class="doctors__list">
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Gasanov.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Гасанов Султан Аламдарович </h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Ynisli.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Юнисли Вафа Гераевна</h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Osmanova.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Османова Эльмаз Руслановна</h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Miruseinov.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Мирусеинов Ленмар Недимович</h4>
+                                <p class="doctor__speciality">Стоматолог</p>
+                                <p class="doctor__text">Специалист по микропротезированию, ортопедии, владеет методиками прямой реставрации и отбеливания зубов.</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     
 <script src="js/functions.js"></script>
 <script src="js/slider.js"></script>

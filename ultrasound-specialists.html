@@ -67,7 +67,7 @@
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link current_nav_link">Главная</a>
+                        <a href="/" class="header__nav-link current_nav_link">Главная</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="#" class="header__nav-link">Услуги</a>
@@ -96,7 +96,251 @@
                 <span class="button__body">запись онлайн</span>
             </a>
         </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Главная</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Врачи</a></li>
+              <li class="breadcrumb__item current"><a class="breadcrumb__link" href="#" aria-current="location">УЗИ</a></li>
+            </ul>
+          </nav>
     </header>
+
+    <main class="ultrasound-specialist-page us-page">
+        <div class="our-us doctors">
+            <div class="container">
+                <h2 class="doctors__heading">наши<span class="text_color_red"> специалисты УЗИ</span></h2>
+                <div class="doctors__content">
+                    <div class="doctors__list">
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/Gurskiy.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Гурский Антон Владимирович</h4>
+                                <p class="doctor__speciality">Мануальный терапевт, 
+                                    Врач-УЗИ диагностики</p>
+                                <p class="doctor__text">Мануальный терапевт с 10-летним стажем, врач УЗИ-диагностики</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="doctor__card">
+                            <div class="doctor__image">
+                                <img src="img/none-doctor.png" alt="">
+                            </div>
+                            <div class="doctor__description">
+                                <h4 class="doctor__name">Гурский Антон Владимирович</h4>
+                                <p class="doctor__speciality">Мануальный терапевт, 
+                                    Врач-УЗИ диагностики</p>
+                                <p class="doctor__text">Мануальный терапевт с 10-летним стажем, врач УЗИ-диагностики</p>
+                                <a href="#" class="doctor__button button button--transparent">
+                                    <span class="button__body">запись онлайн</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="us-page__prices prices">
+            <div class="container">
+                <h2 class="us-page__prices-heading prices-heading">ЦЕНЫ НА УСЛУГИ  <span class="text_color_red">Узи</span></h2>
+                <div class="us-page__prices-content prices__content">
+                    <div class="prices__searchbar">
+                        <input type="text" class="prices__searchbar-input" placeholder="Поиск по ключевым словам...">
+                        <svg class="prices__search-icon" height="24" width="24">
+                            <use xlink:href="img/icons.svg#search"></use>
+                        </svg>
+                    </div>
+                    <div class="prices__tabel">
+                        <h4 class="prices__tabel-heading">Ультразвуковая диагностика</h4>
+                        <ul class="prices__list">
+                            <li>
+                                <span class="prices__service-name">УЗИ брюшной полости (печень, желчный пузырь, поджелудочная железа, селезенка)</span> 
+                                <div class="dots"></div>
+                                <span class="prices__service-price ">от 8 500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование почек и надпочечников</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 10 400 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование мочевого пузыря с остаточной мочой</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 2 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование предстательной железы</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 11 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">УЗИ печени + желчного пузыря</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 5 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование мошонки (яички, придатки)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 5 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование щитовидной железы</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование молочных желез</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование лимфоузлов (лимфоузлы шеи, над- и подключичные, подмышечные, паховые) — 1 зона</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 10 400 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование мягких тканей</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 2 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование плода (I триместр беременности) аппарат Voluson</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 11 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Доплерометрия сосудов малого таза (аппарат Voluson)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 5 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование малого таза (аппарат Voluson)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Доплерометрия сосудов малого таза (аппарат Voluson)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 10 400 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование плода (I триместр беременности) аппарат Voluson</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование многоплодной беременности (I триместр беременности)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 5 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование плода (II триместр беременности)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 2 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование многоплодной беременности (II триместр беременности)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 10 400 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование плода (III триместр беременности) без доплера</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 5 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование многоплодной беременности (III триместр беременности)</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 11 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование тазобедренных суставов</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">Ультразвуковое исследование сустава</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 5 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">УЗИ поджелудочной железы</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">УЗИ селезенки</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 2 000 ₽</span>
+                            </li>
+                            <li>
+                                <span class="prices__service-name">УЗИ желчного пузыря</span> 
+                                <div class="dots"></div> 
+                                <span class="prices__service-price ">от 8 500₽</span>
+                            </li>   
+                        </ul>
+                        
+                    
+                    </div>
+                    <p class="prices__info-text">* Данный прайс не является публичной офертой. Окончательные цены уточняйте по телефону +7 (999) 999-99-99 или у администраторов клиники.</p>
+                </div>
+            </div>
+        </div>
+        <div class="us-consultation">
+            <div class="container">
+                <div class="us-consultation__description">
+                    <h2 class="us-consultation__heading"><span class="text_color_red">Ультразвуковое исследование </span>клиники «юнимед»</h2>
+                    <ul class="us-consultation__list">
+                        <li class="us-consultation__list-item">Наши специалисты помогут вам при любых проблемах с зубами. 
+                            Выберут оптимальную тактику лечения. Окажут хирургическую помощь.</li>
+                        <li class="us-consultation__list-item">Своевременнное обращение к хорошему врачу-стоматологу, 
+                            профессиональная диагностика и квалифицированное лечение в клинике «Юнимед» помогут избежать возможных осложнений.</li>
+                        <li class="us-consultation__list-item">В нашей клинике работают квалифицированные стоматологи, имеющие большой опыт лечения. 
+                            Получить консультации и профессиональное лечение вы можете даже в выходные дни.</li>
+                    </ul>
+                </div>
+                <div class="us-consultation__image">
+                    <img src="img/ultrasound-apparat.png" alt="">
+                    <div class="image-blur-vertical"></div>
+                </div>
+            </div>
+        </div>
+        <div class="us-page__callback">
+            <div class="container">
+                <div class="us-page__cta cta">
+                    <div class="us-page__cta-image cta-image">
+                        <img src="img/uzi-computer.png" alt="">
+                    </div>
+                    <div class="us-page__cta-content cta-content">
+                        <h2 class="us-page__cta-heading cta-heading">ЗАПИСАТЬСЯ<span class="text--medium">НА УЗИ</span></h2>
+                        <p class="us-page__cta-text cta-text">Оставьте заявку и мы ответим на все ваши вопросы</p>
+                        <form action="" class="us-page__cta-form form">
+                            <div class="form-input__inner form-input__name">
+                                <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
+                                <svg class="person-icon form-input__icon" width="20" height="24">
+                                    <use xlink:href="img/icons.svg#person"></use>
+                                </svg>
+                            </div>
+                            <div class="form-input__inner form-input__phone">
+                                <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                                <svg class="phone-icon form-input__icon" width="20" height="21">
+                                    <use xlink:href="img/icons.svg#phone"></use>
+                                </svg>
+                            </div> 
+                            <button type="submit" class="button form__button button--red">
+                                <span class="button__body">Заказать звонок</span>
+                            </button>
+                            <p class="form__accept-text">Нажимая на кнопкку получать рассылку, вы соглашаетесь правилами конфиденцильности</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 <script src="js/functions.js"></script>
 <script src="js/slider.js"></script>
 <footer class="footer">

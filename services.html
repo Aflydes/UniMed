@@ -67,7 +67,7 @@
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link current_nav_link">Главная</a>
+                        <a href="/" class="header__nav-link current_nav_link">Главная</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="#" class="header__nav-link">Услуги</a>
@@ -96,6 +96,12 @@
                 <span class="button__body">запись онлайн</span>
             </a>
         </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Главная</a></li>
+              <li class="breadcrumb__item current"><a class="breadcrumb__link" href="#" aria-current="location">Услуги</a></li>
+            </ul>
+          </nav>
     </header>
     <main class="services-page">
         <div class="services">
@@ -226,9 +232,19 @@
                 <h2 class="service-page__cta-heading cta-heading">хотите<span class="text--medium"> мы вам перезвоним?</span></h2>
                 <p class="service-page__cta-text cta-text">Оставьте заявку и мы ответим на все ваши вопросы</p>
                 <form action="" class="service-page__cta-form form">
-                    <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
-                    <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
-                    <button href="#" class="button form__button button--red">
+                    <div class="form-input__inner form-input__name">
+                        <input type="text" class="form-input form-input__name" placeholder="Ваше имя">
+                        <svg class="person-icon form-input__icon" width="20" height="24">
+                            <use xlink:href="img/icons.svg#person"></use>
+                        </svg>
+                    </div>
+                    <div class="form-input__inner form-input__phone">
+                        <input class="form-input form-input__phone" type="tel" placeholder="+7 (999) 999 - 99 - 99">
+                        <svg class="phone-icon form-input__icon" width="20" height="21">
+                            <use xlink:href="img/icons.svg#phone"></use>
+                        </svg>
+                    </div> 
+                    <button type="submit" class="button form__button button--red">
                         <span class="button__body">получить рассылку</span>
                     </button>
                     <p class="form__accept-text">Нажимая на кнопкку получать рассылку, вы соглашаетесь правилами конфиденцильности</p>
